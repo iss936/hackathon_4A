@@ -21,13 +21,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) AUTO_INCREMENT NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
-  `telPro` int(11) NOT NULL,
-  `mailPro` date NOT NULL,
-  `roles` date NOT NULL,
-  `photo` varchar(25) NOT NULL,
+  `login` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `isExpired` boolean NOT NULL,
+  `telPro` int(11) NULL,
+  `mailPro` varchar(255) NOT NULL,
+  `roles` varchar(255) NOT NULL,
+  `photo` varchar(25) NULL,
+
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+); 
+
+-- login = admin, password = mdp
+INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `password`, `isExpired`, `telPro`, `mailPro`, `roles`, `photo`) VALUES
+(1, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, NULL, 'admin@bestwestern.fr', 'ROLE_ADMIN', NULL);
+
 

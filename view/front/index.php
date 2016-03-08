@@ -1,16 +1,14 @@
-<form role="form" method="POST" action="<?php echo ADRESSE_SITE; ?>index/login">
-	<div class="form-group">
-		<label class="control-label">Login: </label>
-		<input type="text" value="" name="login" class="form-control"/>
+<div class="row">
+	<div class="wrapper">
+		<?php include 'view/front/flashMessage.php'; ?>
+
+		<form action="/index/loginCheck" method="post" name="auth" class="form-signin">       
+		<h1>Connexion</h1>
+		<input type="text" class="form-control" name="login" placeholder="login" required="" autofocus="" />
+		<br>
+		<input type="text" class="form-control" name="password" placeholder="mot de passe" required="" autofocus="" />
+		<br>
+		<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Se connecter" type="Submit">Se connecter</button>			
+		</form>			
 	</div>
-	<div class="form-group">
-		<label class="control-label">Mot de passe</label>
-		<input type="text" value="" name="mdp" class="form-control"/>
-	</div>
-	
-	<div class="">
-		<button type="submit" class="btn green-haze">
-		Se connecter </button>
-		<button type="reset" class="btn default">Annuler </button>
-	</div>
-</form>
+</div>

@@ -15,6 +15,8 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo ADRESSE_SITE; ?>view/css/main.css" rel="stylesheet">
+    <link href="<?php echo ADRESSE_SITE; ?>view/css/style.css" rel="stylesheet">
+
 
     <link href="<?php echo ADRESSE_SITE; ?>view/css/font-awesome.css" rel="stylesheet">
 
@@ -29,6 +31,6 @@
 
 </head>
 <body>
-<h1 class="hidden">Moon Light Tickets</h1>
-<div class="header-background"></div>
+<!-- <h1 class="hidden">Moon Light Tickets</h1> -->
+<!-- <div class="header-background"></div> -->
 <div class="container">

@@ -1,13 +1,13 @@
-body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight: 300; }
+/* body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight: 300; }
 .btn-primary:hover,
 .btn-primary:focus { background-color: #343446; border-color: #343446; opacity: 0.8; }
 .btn-danger:hover,
 .btn-danger:focus { background-color: #df4c47; border-color: #df4c47; opacity: 0.8; }
-/* Install CSS */
+Install CSS
 .header.install { margin: 30px 0; }
 .footer.install .copyright { border-top: 1px solid #e1e1e1; }
 .footer.install .navbar-text { margin-left: 0; }
-/* Header CSS */
+Header CSS
 .header-background { background-color: #343446; height: 249px; position: absolute; width: 100%; }
 .header .navbar { border: none; margin-bottom: 0; }
 .header .navbar .form-control { -webkit-box-shadow: none; border: none; box-shadow: none; width: 110px; }
@@ -56,7 +56,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .header .navbar-default .navbar-right span { color: #343446; margin: 22px 0 22px 10px; }
 .header .navbar-default .navbar-right .form-control { display: inline; margin-top: -5px; }
 .header .breadcrumb { margin-bottom: 40px; margin-top: 20px; }
-/* Main CSS */
+Main CSS
 .main { padding-bottom: 40px; }
 .main h1 { margin-top: 0; }
 .main h3 { border-bottom: 1px solid #e1e1e1; color: #999; margin-bottom: 20px; padding-bottom: 15px; }
@@ -76,7 +76,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .bootstrap-select .dropdown-menu { margin: 0; }
 .main .bootstrap-select .dropdown-menu > li > a:hover,
 .main .bootstrap-select .dropdown-menu > li > a:focus { color: #343446; }
-/* 404 CSS */
+404 CSS
 .main .oops { padding: 60px 0; text-align: center; }
 .main .oops h1 { color: #343446; font-size: 200px; font-weight: bold; }
 .main .oops .input-group { margin: 0 auto; width: 350px; }
@@ -86,14 +86,14 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .oops .form-control::-moz-placeholder { color: #6d96bd; opacity: 1; }
 .main .oops .form-control:-ms-input-placeholder { color: #6d96bd; opacity: 1; }
 .main .oops .form-control:focus { -webkit-box-shadow: none; border-color: #d6e7f6; box-shadow: none; opacity: 0.8; outline: 0; }
-/* FAQ CSS */
+FAQ CSS
 .main .accordion .panel { box-shadow: none; }
 .main .accordion .panel-default > .panel-heading { background-color: #fff; }
 .main .accordion .panel-default,
 .main .accordion .panel-default > .panel-heading + .panel-collapse .panel-body { border: none; }
 .main .accordion h4.panel-title { font-size: 28px; }
 .main .accordion h4.panel-title i { font-size: 18px; }
-/* Contact CSS */
+Contact CSS
 .main .details { margin-bottom: 30px; }
 .main .details h4 { color: #df4c47; }
 .main .details .list-group-item { border: none; color: #333; }
@@ -104,7 +104,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .contact-form textarea { height: 180px; resize: vertical; }
 .main .contact-form .form-control { border: none; box-shadow: none; font-size: 14px; }
 .main .submit .btn-primary { padding: 15px 40px; }
-/* Tickets CSS */
+Tickets CSS
 .main .filter .btn-default { background-color: #fff; border-color: #fff; color: #6d96bd; font-size: 20px; }
 .main .filter .btn-default:hover { color: #343446; }
 .main .filter .btn:active,
@@ -131,7 +131,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .tickets .table > tfoot > tr > td { border: none; }
 .main .pagination-background { background-color: #343446; height: 60px; margin: 20px 0 20px -10000px; padding: 6px 0; }
 .main .pagination { margin: 0 0 0 10000px; }
-/* Tickets Edit CSS */
+Tickets Edit CSS
 .main .ticket-buttons .btn-primary { margin-right: 15px; padding: 9px 45px; }
 .main .ticket-buttons .btn-danger { padding: 9px 36px; }
 .main .tickets i { color: #343446; cursor: pointer; }
@@ -140,7 +140,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .underline { border-bottom: 1px solid #e1e1e1; margin-bottom: 20px; margin-top: 40px; }
 .main .apply-button .bootstrap-select .btn-default { min-height: 53px; }
 .main .apply-button .btn-primary { font-size: 16px; margin-left: 30px; padding: 14px 40px; }
-/* Tickets Profile CSS */
+Tickets Profile CSS
 .main label { color: #333; font-weight: 300; }
 .main label.required { color: #df4c47; }
 .main .general-information img,
@@ -149,7 +149,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .general-information p span { color: #333; }
 .main .profile-details .input-group-lg input { background-color: #eee; border-color: #eee; color: #999; width: 100%; }
 .main .profile-details .btn-danger { font-size: 14px; }
-/* Tickets Register CSS */
+Tickets Register CSS
 .main p.register { margin-bottom: 50px; }
 .main .general-information .fa { padding-left: 45px; padding-right: 15px; }
 .main .general-information a.radio-label { color: #333; text-decoration: none; }
@@ -167,7 +167,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .ticket-details .input-group-lg { margin-bottom: 20px; }
 .main .ticket-details .input-group-lg input { background-color: #eee; color: #999; width: 100%; }
 .main .ticket-details .btn-danger { font-size: 14px; }
-/* Tickets Show CSS */
+Tickets Show CSS
 .main .ticket .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) { margin-top: 10px; width: 140px; }
 .main .ticket .bootstrap-select .btn-default { height: 46px; }
 .main .ticket h2 { margin: 0 0 6px; }
@@ -212,7 +212,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .reply .input-group-lg { margin-bottom: 20px; }
 .main .reply .input-group-lg input { background-color: #eee; border-color: #eee; color: #999; width: 100%; }
 .main .reply .btn-danger { font-size: 14px; }
-/* Departments CSS */
+Departments CSS
 .main .table-responsive { border: none; }
 .main .data-table .table { color: #333; margin: 30px 0 80px; }
 .main .data-table .table > thead > tr > th,
@@ -228,7 +228,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .main .data-table .table .label { font-weight: 300; }
 .main .data-table .table i { cursor: pointer; }
 .main .data-table .table i:not(:first-child) { margin-left: 15px; }
-/* Sidebar CSS */
+Sidebar CSS
 .sidebar { padding-bottom: 40px; }
 .sidebar .btn-danger.btn-lg { margin-bottom: 10px; width: 80%; }
 .sidebar .btn-danger.btn-lg:last-child { margin-bottom: 60px; }
@@ -247,7 +247,7 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .sidebar .form-control::-moz-placeholder { color: #6d96bd; opacity: 1; }
 .sidebar .form-control:-ms-input-placeholder { color: #6d96bd; opacity: 1; }
 .sidebar .form-control:focus { -webkit-box-shadow: none; border-color: #d6e7f6; box-shadow: none; opacity: 0.8; outline: 0; }
-/* Footer CSS */
+Footer CSS
 .footer .navbar { margin-bottom: 0; }
 .footer .navbar-default .navbar-right span { color: #333; cursor: pointer; display: inline-block; font-size: 34px; margin: 16px 30px 5px 10px; }
 .footer .jumbotron { background-color: #d6e7f6; font-weight: 300; margin-bottom: 0; padding: 0; }
@@ -271,4 +271,4 @@ body, h1, h2, h3, h4, h5, h6, input, .btn, .dropdown-menu > li > a { font-weight
 .footer .navbar-inverse .navbar-nav > li > a { color: #6d96bd; }
 .footer .navbar-inverse .navbar-nav > li > a:hover { text-decoration: underline; }
 .footer .navbar-inverse .navbar-right > li:last-child > a { margin-right: 15px; }
-.footer-background { background-color: #343446; height: 340px; margin-top: -340px; position: absolute; width: 100%; z-index: -1; }
+.footer-background { background-color: #343446; height: 340px; margin-top: -340px; position: absolute; width: 100%; z-index: -1; } */
