@@ -1,29 +1,39 @@
 <?php
 class article extends bdd{
-	
+
 	protected $id;
 	protected $titre;
 	protected $createdAt;
 	protected $updatedAt;
 	protected $contenu;
 	protected $authorId;
-    protected $catArticleId;
-	
+  protected $catArticleId;
+
 	public function __construct(){
 		parent::__construct();
 	}
-	
+
+	public function __construct($id=-1, $titre, $createdAt, $updatedAt, $contenu, $authorId, $catArticleId){
+		this->setId($id);
+		this->setTitre($titre);
+		this->setCreatedAt($createdAt);
+		this->setUpdatedAt($updatedAt);
+		this->setContenu($contenu);
+		this->setauthorId($authorId);
+		this->setCatArticleId($catArticleId);
+	}
+
 	public function setFromBdd($var = []){
 		foreach($var as $key => $value){
 			$this->$key = (fonctions::is_serialized($value))?unserialize($value):$value;
 		}
 	}
-	
+
 	public function save($table = "article"){
 		parent::save("article");
 	}
-  
-  
+
+
 
     /**
      * Gets the value of id.

@@ -1,23 +1,32 @@
 <?php
 class demande extends bdd{
-	
+
 	protected $id;
 	protected $createdAt;
 	protected $updatedAt;
 	protected $emmeteurId;
 	protected $destinataireId;
-    protected $catDemandeId;
-	
+  protected $catDemandeId;
+
 	public function __construct(){
 		parent::__construct();
 	}
-	
+
+	public function __construct($id=-1, $createdAt, $updatedAt, $emmeteurId, $destinataireId, $catDemandeId){
+		this->setId($id);
+		this->setCreatedAt($createdAt);
+		this->setUpdatedAt($updatedAt);
+		this->setEmmeteurId($emmeteurId);
+		this->setDestinataireId($destinataireId);
+		this->setCatDemandeId($catDemandeId);
+	}
+
 	public function setFromBdd($var = []){
 		foreach($var as $key => $value){
 			$this->$key = (fonctions::is_serialized($value))?unserialize($value):$value;
 		}
 	}
-	
+
 	public function save($table = "demande"){
 		parent::save("demande");
 	}

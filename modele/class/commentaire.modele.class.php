@@ -1,30 +1,39 @@
 <?php
 class commentaire extends bdd{
-	
+
 	protected $id;
 	protected $createdAt;
 	protected $updatedAt;
 	protected $contenu;
 	protected $authorId;
-    protected $articleId;
-	
+  protected $articleId;
+
 	public function __construct(){
 		parent::__construct();
 	}
-	
+
+	public function __construct($id=-1, $createdAt, $updatedAt, $contenu, $authorId, $articleId){
+		this->setId($id);
+		this->setCreatedAt($createdAt);
+		this->setUpdatedAt($updatedAt);
+		this->setContenu($contenu);
+		this->setauthorId($authorId);
+		this->setArticleId($articleId);
+	}
+
 	public function setFromBdd($var = []){
 		foreach($var as $key => $value){
 			$this->$key = (fonctions::is_serialized($value))?unserialize($value):$value;
 		}
 	}
-	
+
 	public function save($table = "commentaire"){
 		parent::save("commentaire");
 	}
-  
-  
 
-  
+
+
+
 
     /**
      * Gets the value of id.
