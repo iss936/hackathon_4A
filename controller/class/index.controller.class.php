@@ -9,14 +9,14 @@ class index {
 		$view = new view("front","accueil");
 	}
 	
-	public function participerAction($args) {
+	public function faqAction($args) {
 
-		$view = new view("front","participation");
+		$view = new view("front","faq");
 	}
 
-	public function voterAction($args) {
+	public function contactAction($args) {
 
-		$view = new view("front","voter");
+		$view = new view("front","contact");
 	}
 
 	public function not_logged($args){

@@ -22,7 +22,7 @@
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Password">
                             </div>
-                            <button id="login" type="submit" class="btn btn-default">Login</button>
+                            <button type="submit" class="btn btn-default">Login</button>
                             <div class="form-group">
                                 <p class="navbar-text">
                                     <i class="fa fa-check-circle-o"></i>
@@ -62,7 +62,7 @@
                 </nav>
 
                 <div class="jumbotron">
-                    
+                 
                 </div>
 
                 <nav class="navbar navbar-default" role="navigation"><h1 class="hidden">Main Menu</h1>
@@ -79,8 +79,8 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">HOME</a></li>
-                            <li><a href="<?php echo ADRESSE_SITE; ?>index/faqAction">FAQ</a></li>
+                            <li><a href="<?php echo ADRESSE_SITE; ?>index/defaultPage">HOME</a></li>
+                            <li class="active"><a href="#">FAQ</a></li>
                             <li><a href="#">ABOUT</a></li>
                             <li><a href="<?php echo ADRESSE_SITE; ?>index/contactAction">CONTACT</a></li>
                         </ul>
@@ -94,51 +94,152 @@
                 </nav>
 
                 <ol class="breadcrumb">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="<?php echo ADRESSE_SITE; ?>index/defaultPage">Home</a></li>
+                    <li class="active">FAQ</li>
                 </ol>
             </div>
         </header>
     </section>
 
-    <!-- Home Page -->
-    <section class="row" style="
-    padding-top: 20px;"><h1 class="hidden">Content</h1>
+    <!-- FAQ -->
+    <section class="row" style="padding-top: 20px;"><h1 class="hidden">Content</h1>
         <section class="col-md-8">
-            <h1>Best Westen Logo change</h1>
-			<img src="<?php echo ADRESSE_SITE; ?>view/css/img/article-bestWestern-newLogo.png" class="responsive"></img>
-            <p class="root">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum.</p>
-			<hr>
-			<h1>Spring is coming</h1>
-			<img src="<?php echo ADRESSE_SITE; ?>view/css/img/article-bestWestern.jpg" class="responsive"></img>
-            <p class="root">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum.</p>
-			<hr>
+            <h1>FAQ</h1>
+            <p class="root">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.</p>
+
+            <section class="panel-group accordion" id="accordion"><h2 class="hidden">Questions</h2>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-minus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                How I can edit my profile?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                Can I add new users manually?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                What do I do if I've forgotten my username or password?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                How do I close my account?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                How I can have two account connected to each other?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                How I can have two email addresses for my account?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                                Can I change my birthday any time that I like?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSeven" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-plus"></i>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                                How do I change my username?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseEight" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam.Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
         <div class="col-md-1"></div>
         <aside class="col-md-3 sidebar"><h3 class="hidden">Sidebar</h3>
-            <!-- Search -->
-            <section><h4 class="hidden">Search</h4>
-                <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                    <input type="text" class="form-control" placeholder="Search Tickets">
-                </div>
-            </section>
-
-            <!-- Knowledge Base -->
+            <!-- Preferences -->
             <section>
-                <h4>KNOWLEDGE BASE</h4>
+                <h4><i class="fa fa-user red"></i>PREFERENCES</h4>
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Basics</a><span> (38)</span></li>
-                    <li class="list-group-item"><a href="#">Community</a><span> (28)</span></li>
-                    <li class="list-group-item"><a href="#">Copyright &amp; Legal</a><span> (6)</span></li>
-                    <li class="list-group-item"><a href="#">Affiliate Program</a><span> (12)</span></li>
+                    <li class="list-group-item"><a href="profile.html">Profile</a></li>
+                    <li class="list-group-item"><a href="#">Setting</a></li>
+                    <li class="list-group-item"><a href="#">Logout</a></li>
                 </ul>
-            </section>
-
-            <!-- Live Support -->
-            <section><h4 class="hidden">Live Support</h4>
-                <a class="btn btn-lg btn-success" href="#">
-                    <i class="fa fa-comments fa-2x pull-left"></i> LIVE SUPPORT<br>ONLINE
-                </a>
             </section>
 
             <!-- Latest News -->
@@ -147,11 +248,11 @@
                 <ul class="list-group">
                     <li class="list-group-item">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.<br>
-                        <span>By <a href="#">John Doe, <time datetime="2013-04-02">02 Apr 2013</time></a></span>
+                        <span>By <a href="#" class="author">John Doe, <time datetime="2013-04-02">02 Apr 2013</time></a></span>
                     </li>
                     <li class="list-group-item">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.<br>
-                        <span>By <a href="#">John Doe, <time datetime="2013-04-02">02 Apr 2013</time></a></span>
+                        <span>By <a href="#" class="author">John Doe, <time datetime="2013-04-02">02 Apr 2013</time></a></span>
                     </li>
                 </ul>
             </section>
@@ -233,7 +334,4 @@
             </div>
         </footer>
     </section>
-
-
-
 
