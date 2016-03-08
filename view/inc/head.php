@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/bwstyles.css?v=20160119" type="text/css">
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/bootstrap.css" type="text/css">
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/half-slider.css" type="text/css">
+<link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/font-awesome.css" type="text/css">
 
 
 <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
