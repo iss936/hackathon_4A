@@ -108,8 +108,10 @@ CREATE TABLE demande (
 	created datetime NOT NULL,
 	updated datetime NOT NULL,
 	contenu varchar(255) NOT NULL,
+	userId int (11) NOT NULL,
 	catDemandeId int(11) NOT NULL,
 	PRIMARY KEY (id),
+	FOREIGN KEY (userId) REFERENCES user(id),
 	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
 ) ;
 
