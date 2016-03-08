@@ -11,6 +11,7 @@ class user extends bdd{
     protected $mailPro;
     protected $roles;
     protected $photo;
+    // protected $etablissementId;
 	
 	public function __construct(){
 		parent::__construct();

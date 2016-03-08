@@ -44,17 +44,17 @@ CREATE TABLE sousCatArticle (
 	FOREIGN KEY (catArticleId) REFERENCES catArticle(id)
 ) ;
 
-CREATE TABLE `etablissement` (
-	`id` int(11) NOT NULL,
-	`nom` varchar(255) NOT NULL,
-	`adresse` varchar(150) NOT NULL,
-	`ville` varchar(50) NOT NULL,
-	`codePostal` int(50) NOT NULL,
-	`pays` varchar(50) NOT NULL,
-	`photo` varchar(25) NOT NULL,
-	`isSiege` boolean NOT NULL, -- 0 hotel et 1 siege
-	PRIMARY KEY (id)
-);
+-- CREATE TABLE `etablissement` (
+-- 	`id` int(11) NOT NULL,
+-- 	`nom` varchar(255) NOT NULL,
+-- 	`adresse` varchar(150) NOT NULL,
+-- 	`ville` varchar(50) NOT NULL,
+-- 	`codePostal` int(50) NOT NULL,
+-- 	`pays` varchar(50) NOT NULL,
+-- 	`photo` varchar(25) NOT NULL,
+-- 	`isSiege` boolean NOT NULL, -- 0 hotel et 1 siege
+-- 	PRIMARY KEY (id)
+-- );
 --
 -- Structure de la table `user`
 --
@@ -81,37 +81,38 @@ INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `password`, `isExpired`, `te
 CREATE TABLE `article` (
 	`id` int(11) NOT NULL,
 	`titre` varchar(50) NOT NULL,
-	`created` datetime NOT NULL,
-	`updated` datetime NOT NULL,
+	`createdAt` datetime NOT NULL,
+	`updatedAt` datetime NOT NULL,
 	`contenu` text NOT NULL,
-	`userId` int(11) NOT NULL,
+	`authorId` int(11) NOT NULL,
 	`catArticleId` int(11) NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (userId) REFERENCES user(id),
+	FOREIGN KEY (authorId) REFERENCES user(id),
 	FOREIGN KEY (catArticleId) REFERENCES catArticle(id)
 ) ;
 
 CREATE TABLE `commentaire` (
 	id int(11) NOT NULL,
-	created datetime NOT NULL,
-	updated datetime NOT NULL,
+	createdAt datetime NOT NULL,
+	updatedAt datetime NOT NULL,
 	contenu varchar(255) NOT NULL,
-	userId int(11) NOT NULL,
+	authorId int(11) NOT NULL,
 	articleId int(11) NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (userId) REFERENCES user(id),
+	FOREIGN KEY (authorId) REFERENCES user(id),
 	FOREIGN KEY (articleId) REFERENCES article(id)
-) ;
+);
 
 CREATE TABLE demande (
 	id int(11) NOT NULL,
-	created datetime NOT NULL,
-	updated datetime NOT NULL,
+	createdAt datetime NOT NULL,
+	updatedAt datetime NOT NULL,
 	contenu varchar(255) NOT NULL,
-	userId int (11) NOT NULL,
+	emmeteurId int (11) NOT NULL,
+	destinataireId int (11) NOT NULL,
 	catDemandeId int(11) NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (userId) REFERENCES user(id),
+	FOREIGN KEY (emmeteurId) REFERENCES user(id),
+	FOREIGN KEY (destinataireId) REFERENCES user(id),
 	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
-) ;
-
+);
