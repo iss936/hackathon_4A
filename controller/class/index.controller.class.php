@@ -42,6 +42,14 @@ class index
 		$view = new view("front","addDemande");
 	}
         
+        public function forum($args) {
+		$view = new view("front","forum");
+	}
+        
+        public function forumDiscuss($args) {
+		$view = new view("front","forum-discuss");
+	}
+        
 	public function contactAction($args) {
 
 		$view = new view("front","contact");
