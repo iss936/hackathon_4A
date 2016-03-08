@@ -16,6 +16,45 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
+CREATE TABLE catDemande (
+	id int(11) NOT NULL,
+	nom varchar(50) NOT NULL,
+	PRIMARY KEY (id)
+) ;
+
+CREATE TABLE sousCatDemande (
+	id int(11) NOT NULL,
+	nom varchar(50) NOT NULL,
+	catDemandeId int(11) NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
+) ;
+
+CREATE TABLE catArticle (
+	id int(11) NOT NULL,
+	nom varchar(50) NOT NULL,
+	PRIMARY KEY (id)
+) ;
+
+CREATE TABLE sousCatArticle (
+	id int(11) NOT NULL,
+	nom varchar(50) NOT NULL,
+	catArticleId int(11) NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (catArticleId) REFERENCES catArticle(id)
+) ;
+
+CREATE TABLE `etablissement` (
+	`id` int(11) NOT NULL,
+	`nom` varchar(255) NOT NULL,
+	`adresse` varchar(150) NOT NULL,
+	`ville` varchar(50) NOT NULL,
+	`codePostal` int(50) NOT NULL,
+	`pays` varchar(50) NOT NULL,
+	`photo` varchar(25) NOT NULL,
+	`isSiege` boolean NOT NULL, -- 0 hotel et 1 siege
+	PRIMARY KEY (id)
+);
 --
 -- Structure de la table `user`
 --
@@ -32,24 +71,12 @@ CREATE TABLE `user` (
   `roles` varchar(255) NOT NULL,
   `photo` varchar(25) NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (etablissement_id) REFERENCES etablissement(id)
+  FOREIGN KEY (etablissementId) REFERENCES etablissement(id)
 ); 
 
 -- login = admin, password = mdp
 INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `password`, `isExpired`, `telPro`, `mailPro`, `roles`, `photo`) VALUES
 (1, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, NULL, 'admin@bestwestern.fr', 'ROLE_ADMIN', NULL);
-
-CREATE TABLE `etablissement` (
-	`id` int(11) NOT NULL,
-	`nom` varchar(255) NOT NULL,
-	`adresse` varchar(150) NOT NULL,
-	`ville` varchar(50) NOT NULL,
-	`codePostal` int(50) NOT NULL,
-	`pays` varchar(50) NOT NULL,
-	`photo` varchar(25) NOT NULL,
-	`isSiege` boolean NOT NULL, -- 0 hotel et 1 siege
-	PRIMARY KEY (id)
-);
 
 CREATE TABLE `article` (
 	`id` int(11) NOT NULL,
@@ -86,30 +113,3 @@ CREATE TABLE demande (
 	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
 ) ;
 
-CREATE TABLE cat_demande (
-	id int(11) NOT NULL,
-	nom varchar(50) NOT NULL,
-	PRIMARY KEY (id)
-) ;
-
-CREATE TABLE sous_cat_demande (
-	id int(11) NOT NULL,
-	nom varchar(50) NOT NULL,
-	catDemandeId int(11) NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
-) ;
-
-CREATE TABLE cat_article (
-	id int(11) NOT NULL,
-	nom varchar(50) NOT NULL,
-	PRIMARY KEY (id)
-) ;
-
-CREATE TABLE sous_cat_article (
-	id int(11) NOT NULL,
-	nom varchar(50) NOT NULL,
-	catArticleId int(11) NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY (catArticleId) REFERENCES catArticle(id)
-) ;
