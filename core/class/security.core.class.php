@@ -29,25 +29,33 @@ class security{
 		}
 	}
 	
+  /**
+   * Check l'authentification
+   * @param  array $elements
+   * @return void => redirection 
+   */
 	public static function connected($elements){
 		//Création d'une variable de session
 		//redirection
-		$utilisateur = new users;
-		$elements = validation::sanitize($elements);
-		$utilisateur->getOneBy($elements["email"], "email", "users");
+		$utilisateur = new user;
+		// $elements = validation::sanitize($elements);
+		$utilisateur->getOneBy($elements["login"], "login", "user");
 		$utilisateur->setFromBdd($utilisateur->result);
-		if ($utilisateur->get_password() == self::makePassword($elements["pass"]) && $utilisateur->get_is_banned() != 1){
+
+    if ($utilisateur->getPassword() == self::makePassword($elements["password"]) && $utilisateur->getIsExpired() != 1){
 			$uniqid = fonctions::id_aleatoire();
 			$_SESSION['session'] = $uniqid;
-			$_SESSION['nomUtilisateur'] = $utilisateur->get_pseudo();
-			$_SESSION['mdp_generate'] = $utilisateur->get_mdp_generate();
-			$utilisateur->set_token($uniqid);
-			$utilisateur->save("users");
-			header('HTTP/1.0 302 Found');
-			header("Location: ".ADRESSE_SITE."/admin");
+			$_SESSION['id'] = $utilisateur->getId();
+			// $_SESSION['mdp_generate'] = $utilisateur->get_mdp_generate();
+			$utilisateur->save("user");
+			// header('HTTP/1.0 302 Found');
+
+			header("Location: ".ADRESSE_SITE."index/accueil");
 			exit;
 		}else{
-			self::disconnect();
+        $_SESSION['flash_messageError'] = "Login ou mot de passe incorrect";
+           
+        header("Location: ".ADRESSE_SITE);
 		}
 	}	
 	
@@ -56,7 +64,7 @@ class security{
 		//redirection
 		session_unset();
 		session_destroy();
-		header('HTTP/1.0 302 Found');
+		// header('HTTP/1.0 302 Found');
 		header("Location: ".ADRESSE_SITE);
 		exit;
 	}
@@ -151,9 +159,14 @@ public static function cleanInput($input){
    return $isValid;
 }
 	
+  
+  /**
+   * encode en sha1 pass
+   * @param  string $pass
+   * @return string $pass
+   */
 	public static function makePassword($pass){
-		return sha1($pass);
-	}
-	
-	
+    return sha1($pass);
+  }
+
 }

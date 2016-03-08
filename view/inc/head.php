@@ -19,11 +19,15 @@
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/bootstrap.css" type="text/css">
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/half-slider.css" type="text/css">
 
+
 <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+
+
 
 
 </head>
 <body>
+
 <div id="container">
 <div id="header" class="">
 
@@ -78,3 +82,6 @@
 
 	</div>
 </div>
+<!-- <h1 class="hidden">Moon Light Tickets</h1> -->
+<!-- <div class="header-background"></div> -->
+<div class="container">
