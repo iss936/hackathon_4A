@@ -70,7 +70,6 @@ CREATE TABLE `user` (
   `mailPro` varchar(255) NOT NULL,
   `roles` varchar(255) NOT NULL,
   `photo` varchar(25) NULL,
-  `etablissementId` integer NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (etablissementId) REFERENCES etablissement(id)
 ); 

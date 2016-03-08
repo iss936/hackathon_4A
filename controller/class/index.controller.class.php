@@ -33,12 +33,29 @@ class index
 	public function accueil($args) {
 		$view = new view("front","accueil");
 	}
-
+        
+        public function addArticle($args) {
+		$view = new view("front","addArticle");
+	}
+        
+        public function addDemande($args) {
+		$view = new view("front","addDemande");
+	}
+        
 	public function contactAction($args) {
 
 		$view = new view("front","contact");
 	}
-
+        
+        public function insertArticleAction($args) {
+            $sujet = $_POST['sujet'];
+            $message = $_POST['message'];
+            $categorie = $_POST['categorie'];
+            
+            $articleObj = new ArticleModel($sujet,$message,$categorie);
+            $articleObj->save();
+	}
+        
 	public function not_logged($args){
 		
   	}
