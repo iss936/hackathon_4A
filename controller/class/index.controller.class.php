@@ -9,8 +9,9 @@ class index {
 		$view = new view("front","accueil");
 	}
 	
-	public function faqAction($args) {
+	public function loginAction($args) {
 
+		die('ok');
 		$view = new view("front","faq");
 	}
 
