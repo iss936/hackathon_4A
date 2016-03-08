@@ -76,6 +76,12 @@
 				<li><a href="http://travelcard.bestwestern.com/" target="_blank">Travel Card</a></li>
 			</ul>
 		</li>
+
+        <?php if(security::is_connected()): ?>
+            <li>
+            <a href="/index/disconnect" class="expandLinkTopNav mainNavExpandLink" rel=".mainNavExpandLink">Déconnexion</a>
+            </li>
+        <?php endif; ?>
 	</ul>
 
 	<div id="headerDivider" class="">

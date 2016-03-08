@@ -78,10 +78,10 @@
                     <div class="thumbnail">
                         <img src="<?php echo ADRESSE_SITE; ?>view/css/img/Help-icon.png" style="height:150px; width:150px;" alt="">
                         <div class="caption">
-                            <h4><a href="#">Aide</a></h4>
-                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                            <h4><a href="/demandes">Aide</a></h4>
+                            <p>See more snippets like this online store item at.</p>
                         </div>
-                       
+
                     </div>
                 </div>
                 

@@ -6,7 +6,7 @@
 		<h1>Connexion</h1>
 		<input type="text" class="form-control" name="login" placeholder="login" required="" autofocus="" />
 		<br>
-		<input type="text" class="form-control" name="password" placeholder="mot de passe" required="" autofocus="" />
+		<input type="password" class="form-control" name="password" placeholder="mot de passe" required="" autofocus="" />
 		<br>
 		<button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Se connecter" type="Submit">Se connecter</button>			
 		</form>			

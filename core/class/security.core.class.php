@@ -2,18 +2,8 @@
 class security{
 		
 	public static function is_connected(){
-		if (isset($_SESSION['session'])){
-			$utilisateur = new users;
-			$utilisateur->getOneBy($_SESSION["session"], "token", "users");
-			if (isset($utilisateur->result["id"])){
-				if ($utilisateur->result["id"] != 0 && $utilisateur->result["is_banned"] != 1 && $utilisateur->result["is_validate"] == 1){
-					return TRUE;
-				}else{
-					return FALSE;
-				}
-			}else{
-				return FALSE;	
-			}
+		if (isset($_SESSION['id'])){
+      return TRUE;
 		}else{
 			return FALSE;
 		}

@@ -7,6 +7,8 @@ class index
 	}
 	
 	public function defaultPage($args) {
+		if(security::is_connected())
+			header("Location: ".ADRESSE_SITE."index/accueil");
 
 		$view = new view("front","index");
 	}
@@ -38,10 +40,10 @@ class index
 		$view = new view("front","addArticle");
 	}
         
-        public function addDemande($args) {
-		$view = new view("front","addDemande");
-	}
-        
+   /* public function addDemande($args) {
+		$view = new view("front/demande","addDemande");
+	}*/
+
 	public function contactAction($args) {
 
 		$view = new view("front","contact");
@@ -56,7 +58,8 @@ class index
             $articleObj->save();
 	}
         
-	public function not_logged($args){
-		
+	public function disconnect($args){
+		if(security::is_connected())
+			security::disconnect();
   	}
 }

@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 CREATE TABLE catDemande (
-	id int(11) NOT NULL,
+	id int(11) AUTO_INCREMENT NOT NULL,
 	nom varchar(50) NOT NULL,
 	PRIMARY KEY (id)
 ) ;
 
 CREATE TABLE sousCatDemande (
-	id int(11) NOT NULL,
+	id int(11) AUTO_INCREMENT NOT NULL,
 	nom varchar(50) NOT NULL,
 	catDemandeId int(11) NOT NULL,
 	PRIMARY KEY (id),
@@ -31,13 +31,13 @@ CREATE TABLE sousCatDemande (
 ) ;
 
 CREATE TABLE catArticle (
-	id int(11) NOT NULL,
+	id int(11) AUTO_INCREMENT NOT NULL,
 	nom varchar(50) NOT NULL,
 	PRIMARY KEY (id)
 ) ;
 
 CREATE TABLE sousCatArticle (
-	id int(11) NOT NULL,
+	id int(11) AUTO_INCREMENT NOT NULL,
 	nom varchar(50) NOT NULL,
 	catArticleId int(11) NOT NULL,
 	PRIMARY KEY (id),
@@ -70,16 +70,17 @@ CREATE TABLE `user` (
   `mailPro` varchar(255) NOT NULL,
   `roles` varchar(255) NOT NULL,
   `photo` varchar(25) NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (etablissementId) REFERENCES etablissement(id)
+  PRIMARY KEY (id)
 ); 
 
 -- login = admin, password = mdp
 INSERT INTO `user` (`id`, `nom`, `prenom`, `login`, `password`, `isExpired`, `telPro`, `mailPro`, `roles`, `photo`) VALUES
-(1, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, NULL, 'admin@bestwestern.fr', 'ROLE_ADMIN', NULL);
+(1, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, NULL, 'admin@bestwestern.fr', 'ROLE_ADMIN', NULL),
+(2, 'hotel-paris', 'hotel-paris', 'hotel-paris', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, '0125232565', 'hotel-paris@bestwestern.fr', 'ROLE_HOTEL', NULL),
+(3, 'hotel-marseille', 'hotel-marseille', 'hotel-marseille', 'd033e22ae348aeb5660fc2140aec35850c4da997', 0, '0125232567', 'hotel-marseille@bestwestern.fr', 'ROLE_HOTEL', NULL);
 
 CREATE TABLE `article` (
-	`id` int(11) NOT NULL,
+	`id` int(11) AUTO_INCREMENT NOT NULL,
 	`titre` varchar(50) NOT NULL,
 	`createdAt` datetime NOT NULL,
 	`updatedAt` datetime NOT NULL,
@@ -92,7 +93,7 @@ CREATE TABLE `article` (
 ) ;
 
 CREATE TABLE `commentaire` (
-	id int(11) NOT NULL,
+	id int(11) AUTO_INCREMENT NOT NULL,
 	createdAt datetime NOT NULL,
 	updatedAt datetime NOT NULL,
 	contenu varchar(255) NOT NULL,
@@ -104,7 +105,7 @@ CREATE TABLE `commentaire` (
 );
 
 CREATE TABLE demande (
-	id int(11) NOT NULL,
+	id int(11) AUTO_INCREMENT NOT NULL,
 	createdAt datetime NOT NULL,
 	updatedAt datetime NOT NULL,
 	contenu varchar(255) NOT NULL,
@@ -116,3 +117,5 @@ CREATE TABLE demande (
 	FOREIGN KEY (destinataireId) REFERENCES user(id),
 	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
 );
+
+ALTER TABLE `user` CHANGE `telPro` `telPro` VARCHAR(15) NULL DEFAULT NULL;
