@@ -1,2 +1,3 @@
 core/class/constantes.core.class.php
 view/uploads/*
+core/class/bdd.core.class.php
