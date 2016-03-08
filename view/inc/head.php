@@ -82,6 +82,4 @@
 
 	</div>
 </div>
-<!-- <h1 class="hidden">Moon Light Tickets</h1> -->
-<!-- <div class="header-background"></div> -->
-<div class="container">
+
