@@ -1,6 +1,20 @@
 <?php
 class security{
-		
+	
+  /**
+   * [récupère le User connecté]
+   * @param  [integer] $id = id du User
+   * @return object User
+   */
+  public static function getUser()
+  {
+    $user = new user;
+    $user->getOneBy($_SESSION['id'], "id", "user");
+    $user->setFromBdd($user->result);
+
+    return $user;
+  }
+
 	public static function is_connected(){
 		if (isset($_SESSION['id'])){
       return TRUE;

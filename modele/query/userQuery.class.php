@@ -20,6 +20,20 @@ class userQuery
 
 		return $users;
 	}
+
+	/**
+	 * [find récupère un user dont l'id est passé en param]
+	 * @param  integer $id = id du User
+	 * @return object $user
+	 */
+	public static function find($id)
+	{
+		$user = new user;
+		$user->getOneBy($id, "id", "user");
+		$user->setFromBdd($user->result);
+
+		return $user;
+	}
 	
 }
 

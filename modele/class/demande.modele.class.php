@@ -4,19 +4,15 @@ class demande extends bdd{
 	protected $id;
     protected $sujet;
     protected $contenu;
-	protected $createdAt;
-	protected $updatedAt;
+	protected $dateEnvoie;
 	protected $emmeteurId;
 	protected $destinataireId;
     protected $catDemandeId;
 
-
 	public function __construct(){
         parent::__construct();
-        $this->setUpdatedAt(date("Y-m-d H:i:s"));
 /*		$this->setId($id);
-		$this->setCreatedAt($createdAt);
-		$this->setUpdatedAt($updatedAt);
+		$this->setDateEnvoie($dateEnvoie);
 		$this->setEmmeteurId($emmeteurId);
 		$this->setDestinataireId($destinataireId);
 		$this->setCatDemandeId($catDemandeId);*/
@@ -105,49 +101,25 @@ class demande extends bdd{
     }
 
     /**
-     * Gets the value of createdAt.
+     * Gets the value of dateEnvoie.
      *
      * @return mixed
      */
-    public function getCreatedAt()
+    public function getDateEnvoie()
     {
-        return $this->createdAt;
+        return $this->dateEnvoie;
     }
 
     /**
-     * Sets the value of createdAt.
+     * Sets the value of dateEnvoie.
      *
-     * @param mixed $createdAt the created at
+     * @param mixed $dateEnvoie the dateEnvoie
      *
      * @return self
      */
-    public function setCreatedAt($createdAt)
+    public function setDateEnvoie($dateEnvoie)
     {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of updatedAt.
-     *
-     * @return mixed
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
-    }
-
-    /**
-     * Sets the value of updatedAt.
-     *
-     * @param mixed $updatedAt the updated at
-     *
-     * @return self
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
+        $this->dateEnvoie = $dateEnvoie;
 
         return $this;
     }
