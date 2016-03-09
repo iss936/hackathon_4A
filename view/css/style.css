@@ -15,6 +15,9 @@ time, mark, audio, video
 	padding: 0;
 	vertical-align: baseline;
 }
+
+
+
 .gecko html, body, div, span, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
@@ -106,7 +109,7 @@ a, a:active, a:visited { /*text-decoration:none; color:#1F6ECF;*/ }
 a:hover { text-decoration:underline; }
 ul.nav li, ol.nav li { padding-left:0; list-style-type:none; }
 h2 strong, h3, #mainNav, .accountPage h2 { font-family:AdelleBold, serif; text-transform:uppercase; font-weight:normal; }
-#container { width:980px; margin:0 auto; }
+#container { width:980px; height: 100vh; margin:0 auto; }
 /* a.button { display:inline-block; padding:0.5em 1.5em; border:solid 1px #FFF; text-transform:uppercase; font-size:0.85em; font-weight:bold; color:#FFF; background-color:#629D49; text-align:center; } */
 a.button { display:inline-block; padding:0.5em 1.5em; border:solid 1px #FFF; text-transform:uppercase; font-size:0.85em; font-weight:bold; color:#FFF; background:url(/img/bg-button-gradient.gif) repeat-x 0 center; text-align:center; }
 a.button:active, a.button:visited { color:#FFF; }
@@ -172,6 +175,8 @@ a.mapButton { background-image:url(/img/icon-map.gif); }
 
 /* Added for mlos description */
 .mlos {color:#990000; }
+
+
 
 /* Added for additional products information message. */
 .infoMessage {color:#DE2828; }
@@ -1970,13 +1975,13 @@ a.RRbutton1
 	background-position: 50%;
 	background-size: cover;
 	color: white;
-	min-height: 400px;
+	min-height: 100%;
 	padding: 3%;
 }
 #header-connect
 {
 	background: #FFF;
-	height: 95px;
+	height: 75px;
 	position: relative;
 	z-index: 3;
 }
@@ -2014,3 +2019,4 @@ a.RRbutton1
 	font-size: 17px;
 	margin: 0% 0 2% 2%;
 }
+
