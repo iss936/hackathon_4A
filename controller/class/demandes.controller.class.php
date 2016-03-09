@@ -30,22 +30,35 @@ class demandes
 		if($_SERVER['REQUEST_METHOD'] == "POST")
 		{	
 			// Ajouter verif form
-			
-			//
 			$tabDemande = $_POST;
 			// var_dump($tabDemande);
-			$demande = new demande();
-			$demande->setDateEnvoie(date("Y-m-d H:i:s"));
-			$demande->setEmmeteurId($this->idUser);
-			$demande->setSujet($tabDemande['sujet']);
-			$demande->setDestinataireId($tabDemande['destinataire']);
-			$demande->setContenu($tabDemande['message']);
-			$demande->setCatDemandeId($tabDemande['categorie']);
-			
 			$user = security::getUser();
-			$destinataire = userQuery::find($demande->getDestinataireId());
+			$bdd = new bdd();
+			$demande = new demande();
+			$demande->setSujet($tabDemande['sujet']);
+			$demande->setCreatedBy($user->getNom());
+			$demande->setCreatedAt(date("Y-m-d H:i:s"));
+			$demande->setCatDemandeId($tabDemande['categorie']);
+			$demande->save("demande");
+
+			$demandeDiscution = new demandeDiscution();
+			$demandeDiscution->setIdDemande($_SESSION['lastInsertId']);
+			$demandeDiscution->setEmmeteurId($this->idUser);
+			$demandeDiscution->setDestinataireId($tabDemande['destinataire']);
+        	$demandeDiscution->setCreatedAt(date('Y-m-d H:i:s'));
+			$demandeDiscution->setTerminer(0);
+			$demandeDiscution->save("demandeDiscution");
+			
+			$messageDemande = new messageDemande();
+			$messageDemande->setIdDemandeDiscution($_SESSION['lastInsertId']);
+        	$messageDemande->setCreatedAt(date('Y-m-d H:i:s'));
+			$messageDemande->setContenu($tabDemande['message']);
+			$messageDemande->save("messageDemande");
+
 			// envoie mail
-		/*	$to = $destinataire->getEmailPro();
+		/*	
+			$destinataire = userQuery::find($demande->getDestinataireId());
+			$to = $destinataire->getEmailPro();
 			$subject = $demande->getSujet();
 			$txt = $demande->getContenu();
 			$headers = "From:".$user->getEmailPro();
@@ -54,10 +67,9 @@ class demandes
 			mail($to,$subject,$txt,$headers);*/
 			
 			// on retourne à la liste des demande
-			// $demande->save("demande");
 			$_SESSION['flash_messageValidate'] = "Une nouvelle demande a été envoyé";
 
-			if (isset($_POST['save-and-list'])) 
+			if (isset($_POST['save-and-list']))
 			{
 				header("Location: ".ADRESSE_SITE."demandes");
 				exit();

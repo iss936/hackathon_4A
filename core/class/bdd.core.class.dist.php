@@ -17,12 +17,13 @@ class bdd {
 	public function Connection(){
 		$conn = NULL;
 		try{
-			$conn = new PDO("mysql:dbname=".$this->bddname.";host=".$this->bddhost, $this->bddlogin, $this->bddpass);
+			$conn = new PDO("mysql:dbname=".$this->bddname.";host=".$this->bddhost, $this->bddlogin, $this->bddpass,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		} catch (PDOException $e) {
 			echo 'Connexion échouée : '.$e->getMessage();
 		}
 			$this->connexion = $conn;
+			// self::$connexionStatic = $conn;
 	}
   
   	public function save($table){
@@ -46,6 +47,7 @@ class bdd {
 					VALUES ( :" . implode(", :", $child_vars). ");";
 			$query = $this->connexion->prepare($sql);
 			$query->execute($array_to_execute);
+			$_SESSION['lastInsertId'] = $this->connexion->lastInsertId();
 		}
 	}
 	
@@ -92,6 +94,18 @@ class bdd {
 	public function requeteDelete($requete){
 		$query = $this->connexion->prepare($requete);
 		$query->execute();
+	}
+
+/*	public static function lastId()
+	{
+		return self::$connexionStatic->lastInsertId();
+	}*/
+
+	public function getLastId()
+	{
+		var_dump($this->connexion->lastInsertId());
+		die();
+		return $this->connexion->lastInsertId();
 	}
 }
 ?>

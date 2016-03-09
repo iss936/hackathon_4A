@@ -12,7 +12,7 @@
                 <form method="POST" action="/demandes/addDemandeCheck">
                     <div class="form-group">
                       <select name="categorie" class="form-control" id="categorie" required="Veuillez sélectionner une catégorie">
-                          <option value="" selected>services hotêl</option>
+                          <option value="" selected>Choisir une catégorie de demande</option>
                           <?php foreach ($categories as $oneCategorie): ?>
                             <option value="<?php echo $oneCategorie['id'] ?>"><?php echo $oneCategorie['nom']; ?></option>
                           <?php endforeach ?>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                       <label>Destinataire</label>
-                      <select name="destinataire" class="form-control" id="categorie" required="Sélectionner un destinataire">
+                      <select name="destinataire" class="form-control" id="destinataire" required="Sélectionner un destinataire">
                           <option value="" selected>Sélectionner un destinataire</option>
                            <?php foreach ($users as $oneUser): ?>
                             <option value="<?php echo $oneUser['id'] ?>"><?php echo $oneUser['nom']; ?></option>

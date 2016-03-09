@@ -1,17 +1,13 @@
 <?php
-class demande extends bdd{
+class messageDemande extends bdd{
 
 	protected $id;
-    protected $sujet;
-    protected $createdBy;
+    protected $idDemandeDiscution;
     protected $createdAt;
-    protected $catDemandeId;
+    protected $contenu;
 
 	public function __construct(){
         parent::__construct();
-/*		$this->setId($id);
-		$this->setSujet($sujet);
-        setCatDemandeId($catDemandeId);*/
 	}
 
 	public function setFromBdd($var = []){
@@ -20,8 +16,8 @@ class demande extends bdd{
 		}
 	}
 
-	public function save($table = "demande"){
-		parent::save("demande");
+	public function save($table = "messageDemande"){
+		parent::save("messageDemande");
 	}
 
     /**
@@ -49,49 +45,25 @@ class demande extends bdd{
     }
 
     /**
-     * Gets the value of sujet.
+     * Gets the value of idDemandeDiscution.
      *
      * @return mixed
      */
-    public function getSujet()
+    public function getIdDemandeDiscution()
     {
-        return $this->sujet;
+        return $this->idDemandeDiscution;
     }
 
     /**
-     * Sets the value of sujet.
+     * Sets the value of idDemandeDiscution.
      *
-     * @param mixed $sujet the sujet
+     * @param mixed $idDemandeDiscution the id demande discution
      *
      * @return self
      */
-    public function setSujet($sujet)
+    public function setIdDemandeDiscution($idDemandeDiscution)
     {
-        $this->sujet = $sujet;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of createdBy.
-     *
-     * @return mixed
-     */
-    public function getCreatedBy()
-    {
-        return $this->createdBy;
-    }
-
-    /**
-     * Sets the value of createdBy.
-     *
-     * @param mixed $createdBy the created by
-     *
-     * @return self
-     */
-    public function setCreatedBy($createdBy)
-    {
-        $this->createdBy = $createdBy;
+        $this->idDemandeDiscution = $idDemandeDiscution;
 
         return $this;
     }
@@ -109,7 +81,7 @@ class demande extends bdd{
     /**
      * Sets the value of createdAt.
      *
-     * @param mixed $createdAt the cat demande id
+     * @param mixed $createdAt the created at
      *
      * @return self
      */
@@ -121,25 +93,25 @@ class demande extends bdd{
     }
 
     /**
-     * Gets the value of catDemandeId.
+     * Gets the value of contenu.
      *
      * @return mixed
      */
-    public function getCatDemandeId()
+    public function getContenu()
     {
-        return $this->catDemandeId;
+        return $this->contenu;
     }
 
     /**
-     * Sets the value of catDemandeId.
+     * Sets the value of contenu.
      *
-     * @param mixed $catDemandeId the cat demande id
+     * @param mixed $contenu the contenu
      *
      * @return self
      */
-    public function setCatDemandeId($catDemandeId)
+    public function setContenu($contenu)
     {
-        $this->catDemandeId = $catDemandeId;
+        $this->contenu = $contenu;
 
         return $this;
     }
