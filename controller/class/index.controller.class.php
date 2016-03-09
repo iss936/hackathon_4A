@@ -57,8 +57,13 @@ class index
 
 		$view = new view("front","contact");
 	}
+        
+        public function faq($args) {
 
-  public function insertArticle($args) {
+		$view = new view("front","faq");
+	}
+
+        public function insertArticle($args) {
 					$titre = $_POST['sujet'];
 					$contenu = $_POST['message'];
 					$categorie = 2;

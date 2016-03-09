@@ -8,17 +8,13 @@ class commentaire extends bdd{
 	protected $authorId;
   protected $articleId;
 
-	public function __construct(){
-		parent::__construct();
-	}
-
-	public function __construct($id=-1, $createdAt, $updatedAt, $contenu, $authorId, $articleId){
-		this->setId($id);
-		this->setCreatedAt($createdAt);
-		this->setUpdatedAt($updatedAt);
-		this->setContenu($contenu);
-		this->setauthorId($authorId);
-		this->setArticleId($articleId);
+	public function __construct( $createdAt, $updatedAt, $contenu, $authorId, $articleId){
+//		this->setId($id);
+		$this->setCreatedAt($createdAt);
+		$this->setUpdatedAt($updatedAt);
+		$this->setContenu($contenu);
+		$this->setauthorId($authorId);
+		$this->setArticleId($articleId);
 	}
 
 	public function setFromBdd($var = []){
