@@ -17,9 +17,10 @@
             <h1 class="page-header"><i class="fa fa-pencil"></i> Commentaires <a class="btn btn-default" href="<?php echo ADRESSE_SITE; ?>index/forum"><i class="fa fa-backward"></i> Back to Home</a></h1>          
             <ul class="media-list forum">
 
-                <strong>Sujet : <?php echo $article->getTitre(); ?></strong><br>   
+                <strong>Sujet : <?php echo $article->getTitre(); ?></strong><br>
+                <small><i>Dernière modification le : <?php echo $article->getUpdatedAt(); ?></i></small><br><br>   
                 <?php echo $article->getContenu();?>  
-                <hr><br>
+                <hr>
                 <!-- Forum Post -->
                 <?php
                     $listCommentaire = commentaireQuery::getAllCommentsByIdArticle($idArticle);
