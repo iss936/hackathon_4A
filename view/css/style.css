@@ -1,6 +1,3 @@
-
-/* Reset Styles */
-
 html, body, div, span, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
@@ -9,15 +6,15 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, factSheetHeader, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    font-size:100%;
-    font:inherit;
-    vertical-align:baseline;
+time, mark, audio, video
+{
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
-/*[db] browser specific style for mozilla*/
 .gecko html, body, div, span, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
@@ -26,16 +23,16 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 hgroup, menu, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    font-size:100%;
-    font:inherit;
-    vertical-align:baseline;
-    font-family:  Arial, sans-serif;
+time, mark, audio, video
+{
+	border: 0;
+	font: inherit;
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display:block;
@@ -1469,288 +1466,551 @@ a.compareHotelsButton { float:right; font-size:.9em; }
 #smartsearch{
 	border: 1px solid #24488C;
 	position: absolute;
-	background-color:#fff;
+	width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus
+{
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+.invisible
+{
 	visibility: hidden;
+}
+.clearfix:before, .clearfix:after
+{
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom: 1;
+}
+.blocksection
+{
+	border: 2px solid #DCE5EF;
+	margin-bottom: 25px;
+}
+.buttonhide
+{
+	display: none;
+	visibility: hidden;
+}
+.buttonphide
+{
+	display: none;
+	visibility: hidden;
+}
+#headerSignInModal .inner
+{
+	padding: 0px;
+}
+#headerSignInModal
+{
+	width: 450px;
+}
+#headerSignInModal h6
+{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#headerSignInModal h6
+{
+	color: #666;
+	margin-bottom: 10px;
+}
+#headerSignInModal label
+{
+	color: #333;
+	font-size: 0.85em;
+}
+#headerSignInModal .inner
+{
+	padding: 0px;
+}
+#headerSignInModal .leftCol
+{
+	margin: 0;
+	width: 205px;
+}
+#headerSignInModal .rightCol
+{
+	height: 37px;
+	margin: 0;
+	margin-left: 12px;
+	margin-top: 25px;
+	width: 100px;
+}
+#headerSignInModal .rightCol label span
+{
+	display: block;
+	margin-left: 20px;
+}
+#headerSignInModal .rightCol .formField
+{
+	margin-bottom: 25px;
+}
+#headerSignInModal .leftCol
+{
+	margin-left: 15px;
+}
+#headerSignInModal .leftCol .formField
+{
+	margin-bottom: 15px;
+}
+#headerSignInModal .leftCol .formField input
+{
+	width: 200px;
+}
+#headerSignInModal a
+{
+	font-size: 0.85em;
+	font-weight: bold;
+}
+#headerSignIn a, #headerSignIn a:active, #headerSignIn a:visited
+{
+	color: #1F6ECF;
+}
+#headerSignInModal a.button
+{
+	padding: 0.5em 1.5em;
+	word-wrap: break-word;
+}
+#headerSignIn a.button, #headerSignIn a.button:active, #headerSignIn a.button:visited
+{
+	color: #FFF;
+	word-wrap: break-word;
+}
+.airlinePartnerRewards h2
+{
+	background: #013E88;
+	color: #FFF;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 0.5em 1.5em;
+	text-transform: uppercase;
+}
+.accordion-toggle .fa-caret-up
+{
+	color: #E60000 !important;
+}
+#emailSelType
+{
+	background-color: white;
+	border: solid 1px #013E88;
+	margin-right: 25px;
+	margin-top: 15px;
+	position: absolute;
+	text-align: left;
+	WIDTH: 250px;
+	z-index: 5;
+}
+#emailSelTypeFriend
+{
+	background-color: white;
+	border: 3px solid #DCE5EF;
+	left: 0;
+	padding-top: 5px;
+	position: absolute;
+	top: 60px;
+	width: 230px;
+	z-index: 5;
+}
+#emailSelTypeFriend .inner
+{
+	padding: 0 6px;
+	text-align: left;
+}
+#emailSelTypeFriend .inner a.closeButton
+{
+	float: right;
+}
+#emailSelTypeFriend h3
+{
+	background: none repeat scroll 0 0 #013E88;
+	color: #FFFFFF;
+	margin-top: 5px;
+	padding: 5px;
+	text-align: left;
+	text-transform: uppercase;
+}
+.ui-autocomplete
+{
+}
+#city
+{
+	border: 0;
+	display: block !important;
+	position: static !important;
+}
+#smartsearch
+{
+	background-color: #fff;
+	border: 1px solid #24488C;
 	max-height: 335px;
-	overflow-y: auto;
 	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	visibility: hidden;
+	white-space: none;
 	white-space: nowrap;
-	*white-space:none;	
-	z-index:100;
-	}
-#smartsearch div{display:block;}
-#smartsearch div a{padding:5px 20px;display:block;border-bottom:1px solid #E5E5E5;}
-#smartsearch div a:hover{background-color:#E5E5E5;}
-.smartsearchscroll{overflow-y:scroll;height:200px;}
-.bwSearchSelected{background-color:#e5e5e5;}
-
-/* AR0850- For Child Policy on SelectRoom And PropertyPage*/
-.bwChildPolicyEditSearch, .bwChildPolicyEditSearch:visited { color:#013E88; font-weight:bold; }
-
-/* AR0850- For pet Policy */
-.petPolicyInfo { padding-left: 11px; }
-
-/* restriction */
-#popUpHeading h2 { padding:0.5em 1.5em; margin-bottom:10px; font-size:1em; background:#013E88; color:#FFF; text-transform:uppercase; font-weight:bold; }
-#popUpHeading th, #popUpHeading td { padding:0.25em 1em; text-align:center; border-left:solid 1px #DCE5EF; }
-#popUpHeading th:first-child, #popUpHeading td:first-child { border-left:none; }
-
-/* Based on approval from joy Stuart changing the heading font size from 11 to 13 for property name >47 characters */
-.headingGt47 {	
+	z-index: 100;
+}
+#smartsearch div
+{
+	display: block;
+}
+#smartsearch div a
+{
+	border-bottom: 1px solid #E5E5E5;
+	display: block;
+	padding: 5px 20px;
+}
+#smartsearch div a:hover
+{
+	background-color: #E5E5E5;
+}
+.smartsearchscroll
+{
+	height: 200px;
+	overflow-y: scroll;
+}
+.bwSearchSelected
+{
+	background-color: #e5e5e5;
+}
+.bwChildPolicyEditSearch, .bwChildPolicyEditSearch:visited
+{
+	color: #013E88;
+	font-weight: bold;
+}
+.petPolicyInfo
+{
+	padding-left: 11px;
+}
+#popUpHeading h2
+{
+	background: #013E88;
+	color: #FFF;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 0.5em 1.5em;
+	text-transform: uppercase;
+}
+#popUpHeading th, #popUpHeading td
+{
+	border-left: solid 1px #DCE5EF;
+	padding: 0.25em 1em;
+	text-align: center;
+}
+#popUpHeading th:first-child, #popUpHeading td:first-child
+{
+	border-left: none;
+}
+.headingGt47
+{
 	font-size: 13px;
 }
-
-.headingLess47 {
+.headingLess47
+{
 	font-size: 15px;
 }
-
-.additionalOpt {
+.additionalOpt
+{
 	background-color: #F0F3F6;
-    background-position: 3px 9px;
-    border: 1px solid #3F74BA;
-    float: left;
-    padding: 0.5em 1em;
-    position: relative;
-    z-index: 2;
-    color: #013E88;
-    font-weight: bold;
+	background-position: 3px 9px;
+	border: 1px solid #3F74BA;
+	color: #013E88;
+	float: left;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	position: relative;
+	z-index: 2;
 }
-
-.currencyDisclaimerCompare{
-	font-size:11px;
-	font-family:arial; 
-	color: #FF0000; 
+.currencyDisclaimerCompare
+{
+	color: #FF0000;
+	font-family: arial;
+	font-size: 11px;
 }
-
-.redtext{
+.redtext
+{
 	color: #FF0000;
 }
-/* AR0850: CR32 : Remove the cell padding of change destination link    */       
-.chgDestinationlink {    
-    position: relative;
-    color: #013E88;
-    font-weight: bold;
-}
-.additionalTxt{
-	color: #FFFFFF;
-	text-transform:uppercase;
-	text-align:center;
+.chgDestinationlink
+{
+	color: #013E88;
 	font-weight: bold;
-	font-size:1em;
-	background:#FF9900;
-	margin-bottom:23px;
-	padding:6px;
-	}
-.rewardpreference td{
-	padding-right:5px;
+	position: relative;
 }
-.compareLabel:hover{cursor:pointer;}
-.currencyRedText{
+.additionalTxt
+{
+	background: #FF9900;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 23px;
+	padding: 6px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.rewardpreference td
+{
+	padding-right: 5px;
+}
+.compareLabel:hover
+{
+	cursor: pointer;
+}
+.currencyRedText
+{
 	color: #FF0000;
 	font-size: 1.1em;
-    font-style: italic;
-    font-weight: bold;
+	font-style: italic;
+	font-weight: bold;
 }
-.bwAvailabilityCalendarOverlayTop viewAvailableRoomsLabel{
-	 color:#013E88; 
-	 text-transform: none; 
-	 font-size:0.9em;
-	 display:block;
+.bwAvailabilityCalendarOverlayTop viewAvailableRoomsLabel
+{
+	color: #013E88;
+	display: block;
+	font-size: 0.9em;
+	text-transform: none;
 }
-.errorMessage{
-	 color:	#DC143C;
-	 text-transform: none; 
-	 font-size:1.0em;
-	 padding-bottom:6px;
+.errorMessage
+{
+	color: #DC143C;
+	font-size: 1.0em;
+	padding-bottom: 6px;
+	text-transform: none;
 }
-.udfAmenitie {
-     font-weight:bold;
-  }
-/* AR0850: Added to center the interstitial page    */   
-#interstitialContainer{
-width: 600px;
-height: 400px;
-margin: -175px 0 0 -300px;
-position: absolute;
-top: 50%;
-left: 50%;
+.udfAmenitie
+{
+	font-weight: bold;
 }
-.amenitiesTableFormatTd{	
+#interstitialContainer
+{
+	height: 400px;
+	left: 50%;
+	margin: -175px 0 0 -300px;
+	position: absolute;
+	top: 50%;
+	width: 600px;
+}
+.amenitiesTableFormatTd
+{
+	border: 1px solid #DCD5EF;
+	font-size: 0.9em;
 	padding: 0.3em 2em 0.3em 17px;
-	border:1px solid #DCD5EF;    
-    font-size: 0.9em;
-    width: 50%;
+	width: 50%;
 }
-.amenitiesTableFormatTdMatch{
-	background: url("/bestwestern/images/icon-check_grey.gif") no-repeat scroll 4px 4px #DCE5EF ;	
-	border:1px solid #DCD5EF;
-	padding: 0.3em 2em 0.3em 17px;    
-    font-size: 0.9em;
-    width: 50%;
+.amenitiesTableFormatTdMatch
+{
+	background: url("/bestwestern/images/icon-check_grey.gif") no-repeat scroll 4px 4px #DCE5EF;
+	border: 1px solid #DCD5EF;
+	font-size: 0.9em;
+	padding: 0.3em 2em 0.3em 17px;
+	width: 50%;
 }
-
-.amenitiesTableFormatTr{	
-	border:1px solid #DCD5EF;
+.amenitiesTableFormatTr
+{
+	border: 1px solid #DCD5EF;
 }
-.reviewReserveSpanT{margin-left:5px; float:left; margin-right:50px; width:800px; color:#DE2828;}
-.propertyInfoSectionAttrText{ margin-left:-1em;}
-.errorExclBestExtraMsg {color:#DE2828;}
-
-a.compareHotelName { color: #FFFFFF; text-decoration: none;}
-a.compareHotelName:active, a.compareHotelName:visited { color:#FFF; }
-a.compareHotelName:hover { text-decoration:none; }
-
-/* AR0850: Added to align the button center in R&R page in exclusiveBestExtras.jsp for the button update reservation total   */  
-a.RRbutton1 { display:inline-block; padding:0.5em 1.5em; border:solid 1px #FFF; text-transform:uppercase; font-size:0.85em; font-weight:bold; color:#FFF; background:url(/bestwestern/images/bg-button-gradient.gif) repeat-x 0 center; text-align:center; float:right;  }
-
-.roomWebDescription { padding-top:15px; }
-
-.airlineAndPartenerRwdLink{
+.reviewReserveSpanT
+{
+	color: #DE2828;
+	float: left;
+	margin-left: 5px;
+	margin-right: 50px;
+	width: 800px;
+}
+.propertyInfoSectionAttrText
+{
+	margin-left: -1em;
+}
+.errorExclBestExtraMsg
+{
+	color: #DE2828;
+}
+a.compareHotelName
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.compareHotelName:active, a.compareHotelName:visited
+{
+	color: #FFF;
+}
+a.compareHotelName:hover
+{
+	text-decoration: none;
+}
+a.RRbutton1
+{
+	background: url(/bestwestern/images/bg-button-gradient.gif) repeat-x 0 center;
+	border: solid 1px #FFF;
+	color: #FFF;
+	display: inline-block;
+	float: right;
+	font-size: 0.85em;
+	font-weight: bold;
+	padding: 0.5em 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+.roomWebDescription
+{
+	padding-top: 15px;
+}
+.airlineAndPartenerRwdLink
+{
 	color: #1F6ECF;
 }
-.airlineAndPartenerRwdLink:hover{
-	cursor: pointer;text-decoration: underline;
+.airlineAndPartenerRwdLink:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
 }
-
-/*hotel fact sheet*/
-
-#factSheetContainer{
-width: 980px;
- margin: 0 auto;
+#factSheetContainer
+{
+	margin: 0 auto;
+	width: 980px;
 }
-#factSheetHeader{position:relative; height:120px; background:#FFFFFF;}
-#factSheetHeader table{background:#FFFFFF}
-#factSheetHeader td{vertical-align: top;padding-top:10px;}
-.topHoriLine td{padding:5px 15px 0px 15px}
-.topHoriLine div{border-top:solid 1px #DCE5EF;}
-.btmHoriLine td{padding:0px 15px}
-.btmHoriLine div{border-bottom:solid 1px #DCE5EF;}
-#factSheetAmenities {font-family:sans-serif;font-size: 11px; }
-#factSheetAmenities ul{ margin-bottom:1em; padding-left: 16px !important;}
-#factSheetAmenities li { margin-bottom:0.2em; }
-#factSheetAmenities h4 { font-weight:bold; }
-#factSheetAmenities .col1, #factSheetAmenities .col2 { width:90% }
-#factSheetAmenities .col1 { float:left; }
-#factSheetAmenities .col2 { float:right; }
-#factSheetHotelDetail strong{font-family:sans-serif;text-transform:none; }
-.factSheetHotelName {font-size:1.5em;font-weight:bold;text-transform:none; }
-.propImage {
-            padding:3px;border:solid 3px #DCE5EF;           
+#factSheetHeader
+{
+	background: #FFFFFF;
+	height: 120px;
+	position: relative;
 }
-
-.propImage img {
-    height: 77px;   
-    width: 127px;  
+#factSheetHeader table
+{
+	background: #FFFFFF;
 }
-.bwiLogo img {
-    height: 71px;  
-    width: 78px;  
+#factSheetHeader td
+{
+	padding-top: 10px;
+	vertical-align: top;
 }
-.bwiPlusLogo img {
-    height: 96px;  
-    width: 78px;  
+.topHoriLine td
+{
+	padding: 5px 15px 0px 15px;
 }
-.bwiPremierLogo img {
-    height: 96px;  
-    width: 113px;  
+.topHoriLine div
+{
+	border-top: solid 1px #DCE5EF;
 }
-.propertyAlertMsg{
+.btmHoriLine td
+{
+	padding: 0px 15px;
+}
+.btmHoriLine div
+{
+	border-bottom: solid 1px #DCE5EF;
+}
+#factSheetAmenities
+{
+	font-family: sans-serif;
+	font-size: 11px;
+}
+#factSheetAmenities ul
+{
+	margin-bottom: 1em;
+	padding-left: 16px !important;
+}
+#factSheetAmenities li
+{
+	margin-bottom: 0.2em;
+}
+#factSheetAmenities h4
+{
+	font-weight: bold;
+}
+#factSheetAmenities .col1, #factSheetAmenities .col2
+{
+	width: 90%;
+}
+#factSheetAmenities .col1
+{
+	float: left;
+}
+#factSheetAmenities .col2
+{
+	float: right;
+}
+#factSheetHotelDetail strong
+{
+	font-family: sans-serif;
+	text-transform: none;
+}
+.factSheetHotelName
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: none;
+}
+.propImage
+{
+	border: solid 3px #DCE5EF;
+	padding: 3px;
+}
+#main-connect
+{
+	background-image: url(img/cover.jpg);
+	background-position: 50%;
+	background-size: cover;
+	color: white;
+	min-height: 400px;
+	padding: 3%;
+}
+#header-connect
+{
+	background: #FFF;
+	height: 95px;
+	position: relative;
+	z-index: 3;
+}
+.propImage img
+{
+	height: 77px;
+	width: 127px;
+}
+.bwiLogo img
+{
+	height: 71px;
+	width: 78px;
+}
+.bwiPlusLogo img
+{
+	height: 96px;
+	width: 78px;
+}
+.bwiPremierLogo img
+{
+	height: 96px;
+	width: 113px;
+}
+.propertyAlertMsg
+{
 	color: #1F6ECF;
 }
-#main{
-    min-height: 400px;
-    padding: 3%;
+#main
+{
+	min-height: 400px;
+	padding: 3%;
 }
-
-.blocNews{
-    margin : 0% 0 2% 2%;
-    font-size: 17px;
-}
-.blocTop h3{
-    margin-top: 16% !important;
-.wrapper {    
-	margin-top: 80px;
-	margin-bottom: 20px;
-}
-
-.form-signin {
-  max-width: 420px;
-  padding: 30px 38px 66px;
-  margin: 0 auto;
-  background-color: #eee;
-  /*border: 3px dotted rgba(0,0,0,0.1);  */
-  }
-
-.form-signin-heading {
-  text-align:center;
-  margin-bottom: 30px;
-}
-
-.form-login {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-}
-
-input[type="text"] {
-  margin-bottom: 0px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-input[type="password"] {
-  margin-bottom: 20px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.colorgraph {
-  height: 7px;
-  border-top: 0;
-  background: #c4e17f;
-  border-radius: 5px;
-  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-}
-
-.forum.table > tbody > tr > td {
-    vertical-align: middle;
-}
-
-.forum .fa {
-    width: 1em;
-    text-align: center;
-}
-
-.forum.table th.cell-stat {
-    width: 6em;
-}
-
-.forum.table th.cell-stat-2x {
-    width: 14em;
-}
-
-.forum .forum-post-panel {
-    margin-bottom: 1em;
-}
-
-.forum.media-list li img.avatar {
-    display: block;
-    margin: 0 auto;
-}
-
-.forum.media-list li .user-info {
-    text-align: center;
-    width: 8em;
-}
-
-@media (max-width: 760px) {
-    .forum.media-list li .user-info {
-        float: none;
-        width: 100%;
-        margin-bottom: 1em;
-    }
+.blocNews
+{
+	font-size: 17px;
+	margin: 0% 0 2% 2%;
 }

@@ -12,22 +12,13 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="http://placehold.it/1200x315" alt="...">
-          <div class="carousel-caption">
-              <h3>Caption Text</h3>
-          </div>
+            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/bestWestern-1.jpg" style="height: 315px; width: 1200px;" alt="...">
         </div>
         <div class="item">
-          <img src="http://placehold.it/1200x315" alt="...">
-          <div class="carousel-caption">
-              <h3>Caption Text</h3>
-          </div>
+          <img src="<?php echo ADRESSE_SITE; ?>view/css/img/bestWestern-2.jpg" style="height: 315px; width: 1200px;" alt="...">
         </div>
         <div class="item">
-          <img src="http://placehold.it/1200x315" alt="...">
-          <div class="carousel-caption">
-              <h3>Caption Text</h3>
-          </div>
+          <img src="<?php echo ADRESSE_SITE; ?>view/css/img/bestWestern-3.jpg" style="height: 315px; width: 1200px;" alt="...">
         </div>
       </div>
 
@@ -50,52 +41,56 @@
             </p>
             <hr>
             <div>
-                
-                <div class="col-sm-6 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="<?php echo ADRESSE_SITE; ?>view/css/img/forum_icon.png" style="height:150px; width:150px;" alt="">
-                        <div class="caption">
-                            <h4><a href="#">Forums</a></h4>
-                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                        </div>
-                       
-                    </div>
-                </div>
-                
-                <div class="col-sm-6 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="<?php echo ADRESSE_SITE; ?>view/css/img/faq-icon.gif" style="height:150px; width:150px;" alt="">
-                        <div class="caption">
-                            <h4><a href="#">Foire aux questions</a></h4>
-                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                        </div>
-                       
-                    </div>
-                </div>
-                
-                
-                <div class="col-sm-6 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="<?php echo ADRESSE_SITE; ?>view/css/img/Help-icon.png" style="height:150px; width:150px;" alt="">
-                        <div class="caption">
-                            <h4><a href="/demandes">Aide</a></h4>
-                            <p>See more snippets like this online store item at.</p>
-                        </div>
+                <a href="<?php echo ADRESSE_SITE; ?>index/forum" >
+                    <div class="col-sm-6 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img  src="<?php echo ADRESSE_SITE; ?>view/css/img/forum_icon.png" style="height:150px; width:150px;" alt="">
+                            <div class="caption">
+                                <h4><p style="text-align: center;">Forums</p></h4>
+                            </div>
 
-                    </div>
-                </div>
-                
-                
-                <div class="col-sm-6 col-lg-6 col-md-6">
-                    <div class="thumbnail">
-                        <img src="<?php echo ADRESSE_SITE; ?>view/css/img/contact-icons.jpg" style="height:150px; width:150px;" alt="">
-                        <div class="caption">
-                            <h4><a href="#">Contact</a></h4>
-                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                         </div>
-                       
                     </div>
-                </div>
+                </a>
+                
+                <a href="<?php echo ADRESSE_SITE; ?>index/faq">
+                    <div class="col-sm-6 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/faq-icon.gif" style="height:150px; width:150px;" alt="">
+                            <div class="caption">
+                                <h4><p style="text-align: center;">Foire aux questions</p></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+                
+                
+                <a href="<?php echo ADRESSE_SITE; ?>demandes">
+                    <div class="col-sm-6 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/Help-icon.png" style="height:150px; width:150px;" alt="">
+                            <div class="caption">
+                                <h4><p style="text-align: center;">Aide</p></h4>
+                            </div>
+
+                        </div>
+                    </div>  
+                </a>
+                
+                
+                <a href="<?php echo ADRESSE_SITE; ?>index/contactAction">
+                    <div class="col-sm-6 col-lg-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/contact-icons.jpg" style="height:150px; width:150px;" alt="">
+                            <div class="caption">
+                                <h4><p style="text-align: center;">Contact</p></h4>
+                            </div>
+
+                        </div>
+                    </div>    
+                </a>
+                
                 
                 
             </div>

@@ -6,6 +6,7 @@ class commentaire extends bdd{
 	protected $updatedAt;
 	protected $contenu;
 	protected $authorId;
+<<<<<<< HEAD
     protected $articleId;
 
 	public function __construct($contenu='', $authorId='', $articleId=''){
@@ -13,6 +14,14 @@ class commentaire extends bdd{
 		//this->setId($id);
 		$this->setCreatedAt(date("Y-m-d H:i:s"));
 		$this->setUpdatedAt(date("Y-m-d H:i:s"));
+=======
+  protected $articleId;
+
+	public function __construct( $createdAt, $updatedAt, $contenu, $authorId, $articleId){
+//		this->setId($id);
+		$this->setCreatedAt($createdAt);
+		$this->setUpdatedAt($updatedAt);
+>>>>>>> 291c2ac8c9d8768a4c3b0bb8ee400badd0147a17
 		$this->setContenu($contenu);
 		$this->setauthorId($authorId);
 		$this->setArticleId($articleId);
