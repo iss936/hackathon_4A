@@ -31,6 +31,7 @@
 <body>
 
 <div id="container">
+    <?php if(security::is_connected()): ?>
 <div id="header" class="">
 
 	<a href="<?php echo ADRESSE_SITE; ?>index/accueil"><h1 class="ir">Best Western</h1></a>
@@ -44,15 +45,29 @@
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/faq" class="expandLinkTopNav">Faq</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/contactAction" class="expandLinkTopNav">Contact</a></li>
 
-        <?php if(security::is_connected()): ?>
+        
             <li>
             <a href="<?php echo ADRESSE_SITE; ?>index/disconnect" class="expandLinkTopNav">Déconnexion</a>
             </li>
-        <?php endif; ?>
+        
 	</ul>
 
 	<div id="headerDivider" class="">
 
 	</div>
 </div>
+<?php else: ?>
+    
+<div id="header-connect" class="">
+
+	<a href="<?php echo ADRESSE_SITE; ?>index/accueil"><h1 class="ir">Best Western</h1></a>
+
+
+
+	<div id="headerDivider" class="">
+
+	</div>
+</div>
+    
+    <?php endif; ?>
 
