@@ -66,7 +66,7 @@ CREATE TABLE `user` (
   `login` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `isExpired` boolean NOT NULL,
-  `telPro` int(11) NULL,
+  `telPro` varchar(15) NULL,
   `mailPro` varchar(255) NOT NULL,
   `roles` varchar(255) NOT NULL,
   `photo` varchar(25) NULL,
@@ -108,7 +108,8 @@ CREATE TABLE demande (
 	id int(11) AUTO_INCREMENT NOT NULL,
 	createdAt datetime NOT NULL,
 	updatedAt datetime NOT NULL,
-	contenu varchar(255) NOT NULL,
+	sujet varchar(255) NOT NULL,
+	contenu text NOT NULL,
 	emmeteurId int (11) NOT NULL,
 	destinataireId int (11) NOT NULL,
 	catDemandeId int(11) NOT NULL,
@@ -118,4 +119,8 @@ CREATE TABLE demande (
 	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
 );
 
-ALTER TABLE `user` CHANGE `telPro` `telPro` VARCHAR(15) NULL DEFAULT NULL;
+-- ALTER TABLE `user` CHANGE `telPro` `telPro` VARCHAR(15) NULL DEFAULT NULL;
+
+-- ALTER TABLE `demande` ADD `sujet` VARCHAR(255) NOT NULL ;
+-- ALTER TABLE `user` CHANGE `contenu` `contenu` text NOT NULL;
+
