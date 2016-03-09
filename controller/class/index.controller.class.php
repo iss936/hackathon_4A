@@ -58,7 +58,7 @@ class index
 
 		$view = new view("front","contact");
 	}
-        
+
         public function faq($args) {
             		$view = new view("front","faq");
 
@@ -73,14 +73,14 @@ class index
 					$dateCreated = date("Y-m-d H:i:s");
 					$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
 					$articleObj->save('article');
-					header("Location:forumDiscuss");
+					header("Location:forum");
 	}
 
 	public function addComment($args){
 	 	$contenu = $_POST['contenu'];
 	 	$articleId = $args[0];
 		$authorId = $args[1];
-     	
+
      	$commentaireObj = new commentaire($contenu, $authorId ,$articleId);
      	$commentaireObj->save('commentaire');
      	header("Location:/index/forumDiscuss/".$articleId);
