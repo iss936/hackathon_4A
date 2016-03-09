@@ -3,31 +3,41 @@
     <div class="row">
     
         <div class="col-md-8 col-lg-8 blocNews">
+            <?php include 'view/front/flashMessage.php'; ?>
+
             <!-- Half Page Image Background Carousel Header -->
             <h1>Envoyer une demande</h1>
             <hr>
             <div>
-                <form method="POST" action="">
+                <form method="POST" action="/demandes/addDemandeCheck">
                     <div class="form-group">
-                      <select type="email" class="form-control" id="categorie">
-                          <option name="categorie" selected>services hotêl</option>
+                      <select name="categorie" class="form-control" id="categorie" required="Veuillez sélectionner une catégorie">
+                          <option value="" selected>services hotêl</option>
+                          <?php foreach ($categories as $oneCategorie): ?>
+                            <option value="<?php echo $oneCategorie['id'] ?>"><?php echo $oneCategorie['nom']; ?></option>
+                          <?php endforeach ?>
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Sujet</label>
-                      <input type="password" class="form-control" name="sujet" id="sujet" placeholder="Sujet">
+                      <label>Sujet</label>
+                      <input type="text" class="form-control" name="sujet" id="sujet" placeholder="Sujet" required="Veuillez saisir un sujet">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Destinataire</label>
-                      <select type="email" class="form-control" id="categorie">
-                          <option name="categorie" selected>hotêl A</option>
+                      <label>Destinataire</label>
+                      <select name="destinataire" class="form-control" id="categorie" required="Sélectionner un destinataire">
+                          <option value="" selected>Sélectionner un destinataire</option>
+                           <?php foreach ($users as $oneUser): ?>
+                            <option value="<?php echo $oneUser['id'] ?>"><?php echo $oneUser['nom']; ?></option>
+                          <?php endforeach ?>
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputFile">Message</label>
+                      <label>Message</label>
                       <textarea id="message" name="message" class="form-control" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-default">Envoyer</button>
+                    <button type="submit" name="save-and-list" class="btn btn-info">Envoyer et retourner à la liste</button>
+
+                    <button type="submit" name="save" class="btn btn-default">Envoyer et continuer</button>
                   </form>
             </div>
         </div>

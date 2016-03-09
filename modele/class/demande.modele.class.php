@@ -2,23 +2,24 @@
 class demande extends bdd{
 
 	protected $id;
+    protected $sujet;
+    protected $contenu;
 	protected $createdAt;
 	protected $updatedAt;
 	protected $emmeteurId;
 	protected $destinataireId;
-  protected $catDemandeId;
+    protected $catDemandeId;
+
 
 	public function __construct(){
-		parent::__construct();
-	}
-
-	public function __construct($id=-1, $createdAt, $updatedAt, $emmeteurId, $destinataireId, $catDemandeId){
-		this->setId($id);
-		this->setCreatedAt($createdAt);
-		this->setUpdatedAt($updatedAt);
-		this->setEmmeteurId($emmeteurId);
-		this->setDestinataireId($destinataireId);
-		this->setCatDemandeId($catDemandeId);
+        parent::__construct();
+        $this->setUpdatedAt(date("Y-m-d H:i:s"));
+/*		$this->setId($id);
+		$this->setCreatedAt($createdAt);
+		$this->setUpdatedAt($updatedAt);
+		$this->setEmmeteurId($emmeteurId);
+		$this->setDestinataireId($destinataireId);
+		$this->setCatDemandeId($catDemandeId);*/
 	}
 
 	public function setFromBdd($var = []){
@@ -51,6 +52,54 @@ class demande extends bdd{
     public function setId($id)
     {
         $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of sujet.
+     *
+     * @return mixed
+     */
+    public function getSujet()
+    {
+        return $this->sujet;
+    }
+
+    /**
+     * Sets the value of sujet.
+     *
+     * @param mixed $sujet the sujet
+     *
+     * @return self
+     */
+    public function setSujet($sujet)
+    {
+        $this->sujet = $sujet;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of contenu.
+     *
+     * @return mixed
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * Sets the value of contenu.
+     *
+     * @param mixed $contenu the contenu
+     *
+     * @return self
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
 
         return $this;
     }

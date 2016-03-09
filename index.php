@@ -16,9 +16,13 @@ spl_autoload_register( function($class_name) {
 	{
 		include_once("core/class/" . $class_name . ".core.class.php");
 	}
-	 if (file_exists("modele/class/" . $class_name . ".modele.class.php"))
+	if (file_exists("modele/class/" . $class_name . ".modele.class.php"))
 	{
 		include_once("modele/class/" . $class_name . ".modele.class.php");
+	}
+	if (file_exists("modele/query/" . $class_name . ".class.php"))
+	{
+		include_once("modele/query/" . $class_name . ".class.php");
 	}
 });
 
