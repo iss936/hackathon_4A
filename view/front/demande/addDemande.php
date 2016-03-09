@@ -35,9 +35,13 @@
                       <label>Message</label>
                       <textarea id="message" name="message" class="form-control" rows="5"></textarea>
                     </div>
-                    <button type="submit" name="save-and-list" class="btn btn-info">Envoyer et retourner à la liste</button>
-
-                    <button type="submit" name="save" class="btn btn-default">Envoyer et continuer</button>
+                    <div class="row">
+                      <button type="submit" name="save-and-list" class="btn btn-success">Envoyer et retourner à la liste</button>
+                      <button type="submit" name="save" class="btn btn-default">Envoyer et continuer</button>
+                      
+                      <a href="/demandes" class="btn btn-info">Retourner à la liste des demandes</a>
+                    </div>
+                    
                   </form>
             </div>
         </div>

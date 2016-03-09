@@ -32,24 +32,38 @@ class demandes
 			// Ajouter verif form
 			
 			//
-			
 			$tabDemande = $_POST;
 			// var_dump($tabDemande);
 			$demande = new demande();
-			$demande->setCreatedAt(date("Y-m-d H:i:s"));
+			$demande->setDateEnvoie(date("Y-m-d H:i:s"));
 			$demande->setEmmeteurId($this->idUser);
 			$demande->setSujet($tabDemande['sujet']);
 			$demande->setDestinataireId($tabDemande['destinataire']);
 			$demande->setContenu($tabDemande['message']);
 			$demande->setCatDemandeId($tabDemande['categorie']);
 			
+			$user = security::getUser();
+			$destinataire = userQuery::find($demande->getDestinataireId());
 			// envoie mail
-			// 
+		/*	$to = $destinataire->getEmailPro();
+			$subject = $demande->getSujet();
+			$txt = $demande->getContenu();
+			$headers = "From:".$user->getEmailPro();
+			// "\r\n" ."CC: somebodyelse@example.com";
+
+			mail($to,$subject,$txt,$headers);*/
 			
-			$demande->save("demande");
+			// on retourne à la liste des demande
+			// $demande->save("demande");
 			$_SESSION['flash_messageValidate'] = "Une nouvelle demande a été envoyé";
-/*
-			die('ok');
+
+			if (isset($_POST['save-and-list'])) 
+			{
+				header("Location: ".ADRESSE_SITE."demandes");
+				exit();
+			} 
+
+/*			die('ok');
 			$view = new view("front/demande","addDemande");*/
 		}
 		
