@@ -1,16 +1,16 @@
 
 <div id="main">
     <div class="row">
-    
+
         <div class="col-md-8 col-lg-8 blocNews">
             <!-- Half Page Image Background Carousel Header -->
             <h1>Ajouter un article</h1>
             <hr>
             <div>
-                <form method="POST" action="index/insertArticle">
+                <form method="POST" action="/index/insertArticle">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Catégorie</label>
-                      <select type="email" class="form-control" id="categorie">
+                      <select type="email" class="form-control" id="categorie" name="categorie">
                           <option name="categorie" selected>services hotêl</option>
                       </select>
                     </div>
@@ -20,13 +20,13 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputFile">Message</label>
-                      <textarea id="message" class="form-control" rows="5"></textarea>
+                      <textarea id="message" class="form-control" name="message" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn btn-default">Envoyer</button>
                   </form>
             </div>
         </div>
-    
+
         <div class="col-md-3 col-lg-3 blocTop">
             <!-- Half Page Image Background Carousel Header -->
             <h3>Top Hôtels</h3>
