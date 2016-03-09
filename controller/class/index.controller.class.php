@@ -60,7 +60,9 @@ class index
 	}
         
         public function faq($args) {
-}
+            		$view = new view("front","faq");
+
+        }
 
         public function insertArticle($args) {
 
