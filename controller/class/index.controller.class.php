@@ -60,15 +60,10 @@ class index
 	}
         
         public function faq($args) {
-
-<<<<<<< HEAD
-  	public function insertArticle($args) {
-=======
-		$view = new view("front","faq");
-	}
+}
 
         public function insertArticle($args) {
->>>>>>> 291c2ac8c9d8768a4c3b0bb8ee400badd0147a17
+
 					$titre = $_POST['sujet'];
 					$contenu = $_POST['message'];
 					$categorie = 2;
