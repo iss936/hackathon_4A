@@ -9,7 +9,7 @@ class article extends bdd{
 	protected $authorId;
   protected $catArticleId;
 
-	public function __construct($titre, $createdAt, $contenu, $authorId, $catArticleId){
+	public function __construct($titre='', $createdAt='', $contenu='', $authorId='', $catArticleId=''){
 		parent::__construct();
 		//$this->setId($id);
 		$this->setTitre($titre);

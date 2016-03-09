@@ -106,8 +106,7 @@ CREATE TABLE `commentaire` (
 
 CREATE TABLE demande (
 	id int(11) AUTO_INCREMENT NOT NULL,
-	createdAt datetime NOT NULL,
-	updatedAt datetime NOT NULL,
+	dateEnvoie datetime NOT NULL,
 	sujet varchar(255) NOT NULL,
 	contenu text NOT NULL,
 	emmeteurId int (11) NOT NULL,

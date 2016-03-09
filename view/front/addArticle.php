@@ -1,6 +1,12 @@
 
 <div id="main">
     <div class="row">
+       <?php
+            $catArticle = new catArticle();
+            //var_dump($catArticle);
+            $list = $catArticle->getAll('catarticle');
+            //var_dump($list);
+        ?>  
 
         <div class="col-md-8 col-lg-8 blocNews">
             <!-- Half Page Image Background Carousel Header -->
@@ -10,9 +16,20 @@
                 <form method="POST" action="/index/insertArticle">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Catégorie</label>
-                      <select type="email" class="form-control" id="categorie" name="categorie">
-                          <option name="categorie" selected>services hotêl</option>
+                       <select type="email" class="form-control" id="categorie" name="categorie">
+                          <?php
+                            foreach ($list as  $value) {
+                            
+                            
+
+                          ?>
+                          <option name="categorie" selected><?php echo $value['nom']; ?></option>
+                          <?php
+                          }
+                          ?>
+                     
                       </select>
+
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Sujet</label>

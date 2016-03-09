@@ -50,15 +50,16 @@ class index
 	}
 
         public function forumDiscuss($args) {
-		$view = new view("front","forum-discuss");
-	}
+			$view = new view("front","forum-discuss");
+			$view->assign('idArticle',$args[0]);
+		}
 
 	public function contactAction($args) {
 
 		$view = new view("front","contact");
 	}
 
-  public function insertArticle($args) {
+  	public function insertArticle($args) {
 					$titre = $_POST['sujet'];
 					$contenu = $_POST['message'];
 					$categorie = 2;
@@ -67,6 +68,16 @@ class index
 					$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
 					$articleObj->save('article');
 					header("Location:forumDiscuss");
+	}
+
+	public function addComment($args){
+	 	$contenu = $_POST['contenu'];
+	 	$articleId = $args[0];
+		$authorId = $args[1];
+     	
+     	$commentaireObj = new commentaire($contenu, $authorId ,$articleId);
+     	$commentaireObj->save('commentaire');
+     	header("Location:/index/forumDiscuss/".$articleId);
 	}
 
 	public function disconnect($args){

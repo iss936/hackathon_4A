@@ -9,7 +9,6 @@ class bdd {
 	public $result = [];
 	protected $connexion;
 	
-	
 	public function __construct(){
 		self::Connection();
 		$this->classe = get_called_class();
@@ -71,6 +70,17 @@ class bdd {
 		$query->setFetchMode(PDO::FETCH_ASSOC);
 		return $query->fetchAll(PDO::FETCH_ASSOC);
 	}
+
+	public function getAll($table)
+    {
+        $sql = "SELECT * FROM " .$table;
+        $query = $this->connexion->prepare($sql);
+        $query->execute();
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        //On retourne le résultat de la requête dans la variable data sous forme de tableau
+        $data = $query->fetchAll();
+        return $data;
+    }
 	
 	public function requete($requete){
 		$query = $this->connexion->prepare($requete);
