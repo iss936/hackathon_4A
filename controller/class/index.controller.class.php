@@ -5,7 +5,7 @@ class index
 	public function __construct() {
 
 	}
-	
+
 	public function defaultPage($args) {
 		if(security::is_connected())
 			header("Location: ".ADRESSE_SITE."index/accueil");
@@ -13,7 +13,7 @@ class index
 		$view = new view("front","index");
 	}
 
-	public function loginCheck($args) 
+	public function loginCheck($args)
 	{
 		// d033e22ae348aeb5660fc2140aec35850c4da997
 
@@ -27,7 +27,7 @@ class index
 				security::connected($tab);
 			}
 		}
-		
+
 		header("Location: ".ADRESSE_SITE);
 
 	}
@@ -35,38 +35,40 @@ class index
 	public function accueil($args) {
 		$view = new view("front","accueil");
 	}
-        
+
         public function addArticle($args) {
 		$view = new view("front","addArticle");
 	}
-        
+
 
         public function addDemande($args) {
 		$view = new view("front","addDemande");
 	}
-        
+
         public function forum($args) {
 		$view = new view("front","forum");
 	}
-        
+
         public function forumDiscuss($args) {
 		$view = new view("front","forum-discuss");
 	}
-        
+
 	public function contactAction($args) {
 
 		$view = new view("front","contact");
 	}
-        
-        public function insertArticleAction($args) {
-            $sujet = $_POST['sujet'];
-            $message = $_POST['message'];
-            $categorie = $_POST['categorie'];
-            
-            $articleObj = new ArticleModel($sujet,$message,$categorie);
-            $articleObj->save();
+
+  public function insertArticle($args) {
+					$titre = $_POST['sujet'];
+					$contenu = $_POST['message'];
+					$categorie = 2;
+					$author = 2;
+					$dateCreated = date("Y-m-d H:i:s");
+					$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
+					$articleObj->save('article');
+					header("Location:forumDiscuss");
 	}
-        
+
 	public function disconnect($args){
 		if(security::is_connected())
 			security::disconnect();

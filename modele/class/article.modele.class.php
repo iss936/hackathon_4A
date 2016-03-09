@@ -9,18 +9,15 @@ class article extends bdd{
 	protected $authorId;
   protected $catArticleId;
 
-	public function __construct(){
+	public function __construct($titre, $createdAt, $contenu, $authorId, $catArticleId){
 		parent::__construct();
-	}
-
-	public function __construct($id=-1, $titre, $createdAt, $updatedAt, $contenu, $authorId, $catArticleId){
-		this->setId($id);
-		this->setTitre($titre);
-		this->setCreatedAt($createdAt);
-		this->setUpdatedAt($updatedAt);
-		this->setContenu($contenu);
-		this->setauthorId($authorId);
-		this->setCatArticleId($catArticleId);
+		//$this->setId($id);
+		$this->setTitre($titre);
+		$this->setCreatedAt($createdAt);
+		$this->setUpdatedAt(date('Y-m-d H:i:s'));
+		$this->setContenu($contenu);
+		$this->setauthorId($authorId);
+		$this->setCatArticleId($catArticleId);
 	}
 
 	public function setFromBdd($var = []){

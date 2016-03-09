@@ -2,8 +2,8 @@
     <div class="row">
 
         <div class="col-md-8 col-lg-8 blocNews">
-            
-            <h1 class="page-header"><i class="fa fa-pencil"></i> Interesting topic <a class="btn btn-default" href="<?php echo ADRESSE_SITE; ?>index/forum"><i class="fa fa-backward"></i> Back to topics</a></h1>
+
+            <h1 class="page-header"><i class="fa fa-pencil"></i> Interesting topic <a class="btn btn-default" href="<?php echo ADRESSE_SITE; ?>index/forum"><i class="fa fa-backward"></i> Back to Home</a></h1>
             <p class="lead">Hello! This is the awesome slogan fof your topic.</p>
             <p class="alert alert-danger">This topic is <strong>2 years</strong> old. It can be missleading. Add warnings just like any other alerts with Bootstrap!</p>
             <ul class="media-list forum">
@@ -65,10 +65,10 @@
                   </div>
                 </li>
                 <!-- Forum Post END -->
-                
+
                 <!-- Form add comment-->
                 <li class="media well">
-                 
+
                     <form method="POST" action="#">
                         <h5><b>Commenter</b></h5>
                         <hr>
@@ -81,7 +81,7 @@
                 <!-- Form add comment END-->
         </ul>
     </div>
-        
+
     <div class="col-md-3 col-lg-3 blocTop">
         <!-- Half Page Image Background Carousel Header -->
         <h3>Top Hôtels</h3>
@@ -99,6 +99,6 @@
             </ul>
         </table>
     </div>
-        
+
     </div>
 </div>
