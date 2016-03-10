@@ -104,32 +104,39 @@ class index
             $view = new view("front","faq");
         }
 
-        public function insertArticle($args) {
+    public function insertArticle($args) {
 
-					$titre = $_POST['sujet'];
-					$contenu = $_POST['message'];
-					$categorie = 2;
-					$author = 2;
-					$dateCreated = date("Y-m-d H:i:s");
-					$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
-					$articleObj->save('article');
-					header("Location:forum");
+		$titre = $_POST['sujet'];
+		$contenu = $_POST['message'];
+		$categorie = 2;
+		$author = 2;
+		$dateCreated = date("Y-m-d H:i:s");
+		$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
+		$articleObj->save('article');
+		header("Location:forum");
 	}
 
 	public function insertMember($args) {
 
-					$nom = $_POST['nom'];
-					$prenom = $_POST['prenom'];
-					$login = $_POST['login'];
-					$password = $_POST['password'];
-					$phone = $_POST['phone'];
-					$mail = $_POST['mail'];
-					$typeAdmin = $_POST['typeAdmin'];
+		$nom = $_POST['nom'];
+		$prenom = $_POST['prenom'];
+		$login = $_POST['login'];
+		$password = $_POST['password'];
+		$phone = $_POST['phone'];
+		$mail = $_POST['mail'];
+		$typeAdmin = $_POST['typeAdmin'];
 
-					$memberObj = new user();
-					$memberObj->setAll($nom, $prenom, $login, $password, $phone, $mail, $typeAdmin);
-					$memberObj->save('user');
-					header("Location:admin");
+		$memberObj = new user();
+		$memberObj->setAll($nom, $prenom, $login, $password, $phone, $mail, $typeAdmin);
+		$memberObj->save('user');
+		header("Location:admin");
+	}
+
+	public function removeArticle($args){
+		$id = $args[0];
+		$articleObj = new article();
+		$articleObj->deleteObj($id,'article');
+		header('Location:/index/admin');
 	}
 
 	public function addComment($args){

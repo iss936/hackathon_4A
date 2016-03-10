@@ -2,7 +2,8 @@
     <div class="row">
 
         <?php
-           
+            $user = new user();
+            $listUser = $user->getAll('user');
         ?>
 
         <div class="col-md-8 col-lg-8 blocNews">
@@ -15,24 +16,30 @@
                     <th class="cell-stat"></th>
                     <th>Contact</th>
                     <th class="cell-stat text-center hidden-xs hidden-sm">Mail</th>
-                    <th class="cell-stat-2x hidden-xs hidden-sm">Numéro</th>
+                    <th class="cell-stat-2x hidden-xs hidden-sm">Téléphone</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-                   
+                    foreach($listUser as $value){
+
+
                   ?>
                   <tr>
-                    <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                    <td class="text-center"><i class="fa fa-user fa-2x text-primary"></i></td>
                     <td>
-                     <h4><a href=""> <?php  ?></a></h4>
+                     <h4><a href=""> <?php echo $value['prenom']." ".$value['nom'];?> </a></h4>
                     </td>
-                    <td class="text-center hidden-xs hidden-sm"><a href="#"><?php    ?></a></td>
-                    <td class="hidden-xs hidden-sm">by <a href="#"><?php ?></a><br><small><i class="fa fa-clock-o"></i> <?php ?></small></td>
+                    <td class="text-center hidden-xs hidden-sm">
+                        <h4><a href=""> <?php echo $value['mailPro']; ?> </a></h4>
+                    </td>
+                    <td class="hidden-xs hidden-sm">
+                        <h4><a href=""><?php echo $value['telPro']; ?> </a></h4>
+                    </td>
                   </tr>
 
                   <?php
-                  
+                    }
                   ?>
 
                 </tbody>

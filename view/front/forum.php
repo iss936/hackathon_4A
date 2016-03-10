@@ -32,7 +32,7 @@
                     $user = userQuery::find($id);
                   ?>
                   <tr>
-                    <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                    <td class="text-center"><i class="fa fa-file-o fa-2x text-primary"></i></td>
                     <td>
                       <h4><a href="<?php echo ADRESSE_SITE; ?>index/forumDiscuss/<?php echo $value['id']?>"> <?php echo $value['titre'] ?></a></h4>
                     </td>
@@ -51,7 +51,7 @@
         
         <div class="col-md-3 col-lg-3 blocTop">
         <!-- Half Page Image Background Carousel Header -->
-        <h3>Top Hôtels</h3>
+        <h3 style="margin-bottom: 17%;">Top Hôtels</h3>
         <hr>
         <table class="table table-striped ">
             <ul class="list-group">
