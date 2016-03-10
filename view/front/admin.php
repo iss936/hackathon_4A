@@ -1,27 +1,30 @@
 <?php 
 
-//include("dashboardHead.php"); 
 
-/* Count Member 
-$memberCountObj = new memberModel();
-$nbMember = $memberCountObj->countRow();
+$article = new article();
+$user = new user();
+$demande = new demande();
 
-/* Count Picture 
-$pictureCountObj = new pictureModel();
-$nbPicture = $pictureCountObj->countRow();
+$list = $article->getAll('article');
+$listUser = $user->getAll('user');
+$listDemande = $demande->getAll('demande');
 
-/* Count Contest 
-$contestCountObj = new contestModel();
-$nbContest = $contestCountObj->countRow();
+$compte;
+$cptUser;
+$cptDemande;
 
-// Select user limit 8
-$memberListObj = new memberModel();
-$members = $memberListObj->getUserByLimit();
+foreach ($list as $cpt) {
+    $compte +=1;
+}
 
-// Select contest limit 8
-$contestListObj = new contestModel();
-$contests = $contestListObj->getContestByLimit();
-*/
+foreach ($listUser as $cpt) {
+    $cptUser +=1;
+}
+
+foreach ($listDemande as $cpt) {
+    $cptDemande +=1;
+}
+//echo "compte : ".$compte;
 ?>
 
 <div id="wrapper">
@@ -46,11 +49,11 @@ $contests = $contestListObj->getContestByLimit();
                                 <div class="panel-heading">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <i class="fa fa-trophy fa-5x"></i>
+                                            <i class="fa fa-commenting fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge"><?php echo $nbContest; ?></div>
-                                            <div>Demandes envoyées</div>
+                                            <div class="huge"><?php echo $cptDemande; ?></div>
+                                            <div class="titleAdmin">Demandes envoyées</div>
                                         </div>
                                     </div>
                                 </div>
@@ -64,8 +67,8 @@ $contests = $contestListObj->getContestByLimit();
                                             <i class="fa fa-file-image-o fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge"><?php //echo $nbPicture; ?></div>
-                                            <div>Articles </div>
+                                            <div class="huge"><?php echo $compte; ?></div>
+                                            <div class="titleAdmin">Articles </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,8 +82,8 @@ $contests = $contestListObj->getContestByLimit();
                                             <i class="fa fa-users fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge"><?php //echo $nbMember; ?></div>
-                                            <div>Membres</div>
+                                            <div class="huge"><?php echo $cptUser; ?></div>
+                                            <div class="titleAdmin">Membres</div>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +99,44 @@ $contests = $contestListObj->getContestByLimit();
                                 <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Gérer les articles </h3>
                             </div>
                             <div class="panel-body">
-                                <div id="statistics-chart"></div>
+                                
+                                <div class="col-md-12 col-lg-12 blocNews">
+                                    <!-- Half Page Image Background Carousel Header -->
+                                    <h1>Articles</h1>
+                                    <hr>
+                                    <table class="table forum table-striped">
+                                        <thead>
+                                          <tr>
+                                            <th class="cell-stat"></th>
+                                            <th>Sujet</th>
+                                            <th class="cell-stat text-center hidden-xs hidden-sm">Commentaires</th>
+                                            <th class="cell-stat-2x hidden-xs hidden-sm">Supprimer</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <?php
+                                            foreach ($list as $value) {
+                                            $listCommentaire = commentaireQuery::countAllCommentsById($value['id']);
+                                            $id = $value['authorId']; 
+                                            $user = userQuery::find($id);
+                                          ?>
+                                          <tr>
+                                            <td class="text-center"><i class="text-primary"></i></td>
+                                            <td>
+                                              <h4><a href="<?php echo ADRESSE_SITE; ?>index/forumDiscuss/<?php echo $value['id']?>"> <?php echo $value['titre'] ?></a></h4>
+                                            </td>
+                                            <td class="text-center hidden-xs hidden-sm"><a href="#"><?php  echo $listCommentaire;  ?></a></td>
+                                            <td class="hidden-xs hidden-sm"><a href="#" class='btn btn-primary'>Supprimer</a></td>
+                                          </tr>
+
+                                          <?php
+                                          }
+                                          ?>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -108,7 +148,7 @@ $contests = $contestListObj->getContestByLimit();
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Ajouter un membre </h3>
                             </div>
-                            <div class="panel-body" style="height:360px; overflow: scroll;">
+                            <div class="panel-body" style="height:560px; overflow: scroll;">
                                 <form method="POST" action="/index/insertMember">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Nom</label>
@@ -134,16 +174,8 @@ $contests = $contestListObj->getContestByLimit();
                                         <label for="exampleInputPassword1">Mail</label>
                                         <input type="text" class="form-control" name="mail" id="mail" placeholder="mail">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Type Admin</label>
-                                        <input type="text" class="form-control" name="typeAdmin" id="typeAdmin" placeholder="type Admin">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Photo</label>
-                                        <input type="text" class="form-control" name="photo" id="photo" placeholder="photo">
-                                    </div>
                                     
-                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                                <button type="submit" class="btn btn-primary col-md-5 col-lg-5 col-lg-offset-4 col-lg-offset-4">Envoyer</button>
                               </form>
                                 
                             </div>

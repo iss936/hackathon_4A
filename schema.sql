@@ -90,7 +90,7 @@ CREATE TABLE `article` (
 	PRIMARY KEY (id),
 	FOREIGN KEY (authorId) REFERENCES user(id),
 	FOREIGN KEY (catArticleId) REFERENCES catArticle(id)
-);
+) ;
 
 CREATE TABLE `commentaire` (
 	id int(11) AUTO_INCREMENT NOT NULL,
@@ -105,36 +105,17 @@ CREATE TABLE `commentaire` (
 );
 
 CREATE TABLE demande (
-  id int(11) AUTO_INCREMENT NOT NULL,
-  sujet varchar(255) NOT NULL,
-  createdBy varchar(255) NOT NULL,
-  createdAt datetime NOT NULL,
-  catDemandeId int(11) NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
-);
-
-CREATE TABLE demandeDiscution (
-  id int(11) AUTO_INCREMENT NOT NULL,
-  idDemande int(11) NOT NULL,
-  emmeteurId int (11) NOT NULL,
-  destinataireId int (11) NOT NULL,
-  createdAt datetime NOT NULL,
-  updatedAt datetime NOT NULL,
-  terminer boolean NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (idDemande) REFERENCES demande(id),
-  FOREIGN KEY (emmeteurId) REFERENCES user(id),
-  FOREIGN KEY (destinataireId) REFERENCES user(id)
-);
-
-CREATE TABLE messageDemande (
 	id int(11) AUTO_INCREMENT NOT NULL,
-  idDemandeDiscution integer NOT NULL,
-  createdAt datetime NOT NULL,
-  contenu text NOT NULL,
+	dateEnvoie datetime NOT NULL,
+	sujet varchar(255) NOT NULL,
+	contenu text NOT NULL,
+	emmeteurId int (11) NOT NULL,
+	destinataireId int (11) NOT NULL,
+	catDemandeId int(11) NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (idDemandeDiscution) REFERENCES demandeDiscution(id)
+	FOREIGN KEY (emmeteurId) REFERENCES user(id),
+	FOREIGN KEY (destinataireId) REFERENCES user(id),
+	FOREIGN KEY (catDemandeId) REFERENCES catDemande(id)
 );
 
 -- ALTER TABLE `user` CHANGE `telPro` `telPro` VARCHAR(15) NULL DEFAULT NULL;
