@@ -13,19 +13,16 @@ class user extends bdd{
   protected $photo;
     // protected $etablissementId;
 
-/*	public function __construct($id=-1, $nom, $prenom, $login, $password, $isExpired, $telPro, $mailPro, $roles, $photo){
-		parent::__construct();
-		$this->setId($id);
+	public function setAll($nom, $prenom, $login, $password, $telPro, $mailPro, $roles){
+
 		$this->setNom($nom);
 		$this->setPrenom($prenom);
 		$this->setLogin($login);
 		$this->setPassword($password);
-		$this->setIsExpired($isExpired);
 		$this->setTelPro($telPro);
 		$this->setMailPro($mailPro);
 		$this->setRoles($roles);
-		$this->setPhoto($photo);
-	}*/
+	}
 
 	public function __construct(){
 		parent::__construct();
