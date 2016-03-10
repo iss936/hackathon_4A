@@ -56,12 +56,21 @@ class index
 
 	public function contactAction($args) {
 
-		$view = new view("front","contact");
+            $view = new view("front","contact");
+            $to      = 'adama_sakho@hotmail.com';
+            $subject = 'the subject';
+            $message = 'hello';
+            $headers = 'From: webmaster@example.com' . "\r\n" .
+            'Reply-To: webmaster@example.com' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+            mail($to, $subject, $message, $headers);
 	}
+        
+        
 
         public function faq($args) {
-            		$view = new view("front","faq");
-
+            $view = new view("front","faq");
         }
 
         public function insertArticle($args) {
