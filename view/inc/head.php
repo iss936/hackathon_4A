@@ -44,7 +44,7 @@
 		<li><a href="<?php echo ADRESSE_SITE; ?>demandes" class="expandLinkTopNav">Demande</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/addArticle" class="expandLinkTopNav">Poster</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/faq" class="expandLinkTopNav">Faq</a></li>
-		<li><a href="<?php echo ADRESSE_SITE; ?>index/forum" class="expandLinkTopNav">Admin</a></li>
+		<li><a href="<?php echo ADRESSE_SITE; ?>index/admin" class="expandLinkTopNav">Admin</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/contactAction" class="expandLinkTopNav">Contact</a></li>
 
         
