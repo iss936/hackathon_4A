@@ -6,6 +6,8 @@
             //var_dump($catArticle);
             $list = $catArticle->getAll('catarticle');
             //var_dump($list);
+
+            $idUser = $_SESSION['id'];
         ?>  
 
         <div class="col-md-8 col-lg-8 blocNews">
@@ -13,7 +15,7 @@
             <h1>Ajouter un article</h1>
             <hr>
             <div>
-                <form method="POST" action="/index/insertArticle">
+                <form method="POST" action="/index/insertArticle/<?php echo $idUser;?>">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Catégorie</label>
                        <select type="email" class="form-control" id="categorie" name="categorie">
@@ -23,7 +25,7 @@
                             
 
                           ?>
-                          <option name="categorie" selected><?php echo $value['nom']; ?></option>
+                          <option value="<?php echo $value['id']; ?>" selected><?php echo $value['nom']; ?></option>
                           <?php
                           }
                           ?>

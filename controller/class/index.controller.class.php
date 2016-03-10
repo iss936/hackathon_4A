@@ -105,15 +105,17 @@ class index
         }
 
     public function insertArticle($args) {
+    	//var_dump($_POST['sujet']);
+    	//die();
 
 		$titre = $_POST['sujet'];
 		$contenu = $_POST['message'];
-		$categorie = 2;
-		$author = 2;
+		$categorie = $_POST['categorie'];
+		$author = $args[0];
 		$dateCreated = date("Y-m-d H:i:s");
 		$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
 		$articleObj->save('article');
-		header("Location:forum");
+		header("Location:/index/forum");
 	}
 
 	public function insertMember($args) {

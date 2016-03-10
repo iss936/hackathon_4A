@@ -10,6 +10,9 @@
             //$test = new user();
             //$test->getOneBy(1,'user');
             //print_r($test);
+
+            $idUser = $_SESSION['id'];
+        
         ?>
 
         <div class="col-md-8 col-lg-8 blocNews">
@@ -66,7 +69,7 @@
                 <!-- Form add comment-->
                 <li class="media well">
 
-                    <form method="POST" action="/index/addComment/<?php echo $idArticle; ?>/2">
+                    <form method="POST" action="/index/addComment/<?php echo $idArticle; ?>/<?php echo $idUser; ?>">
                         <h5><b>Commenter</b></h5>
                         <hr>
                         <div class="form-group">
