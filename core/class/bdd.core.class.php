@@ -96,6 +96,12 @@ class bdd {
 		$query->execute();
 	}
 
+	public function deleteObj($id,$table){
+		$sql = "DELETE FROM ".$table." WHERE id=".$id;
+		$query = $this->connexion->prepare($sql);
+		$query->execute();
+	}
+
 /*	public static function lastId()
 	{
 		return self::$connexionStatic->lastInsertId();
