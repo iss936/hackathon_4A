@@ -49,10 +49,14 @@ class index
 		$view = new view("front","forum");
 	}
 
-        public function forumDiscuss($args) {
+	public function admin($args) {
+		$view = new view("front","admin");
+	}
+    
+    public function forumDiscuss($args) {
 			$view = new view("front","forum-discuss");
 			$view->assign('idArticle',$args[0]);
-		}
+	}
 
 	public function contactAction($args) {
 
@@ -74,6 +78,22 @@ class index
 					$articleObj = new article($titre, $dateCreated, $contenu, $author, $categorie);
 					$articleObj->save('article');
 					header("Location:forum");
+	}
+
+	public function insertMember($args) {
+
+					$nom = $_POST['nom'];
+					$prenom = $_POST['prenom'];
+					$login = $_POST['login'];
+					$password = $_POST['password'];
+					$phone = $_POST['phone'];
+					$mail = $_POST['mail'];
+					$typeAdmin = $_POST['typeAdmin'];
+
+					$memberObj = new user();
+					$memberObj->setAll($nom, $prenom, $login, $password, $phone, $mail, $typeAdmin);
+					$memberObj->save('user');
+					header("Location:admin");
 	}
 
 	public function addComment($args){

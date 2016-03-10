@@ -103,7 +103,7 @@ hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 
 }
 
 body, select, input, textarea { color:#333; font-family:sans-serif; }
-body { background:#F0F3F6 url(/img/bg-body.jpg) repeat-x 0 0 !important; }
+
 h1, h2, h3, h4, h5, h6 { color:#013E88; }
 a, a:active, a:visited { /*text-decoration:none; color:#1F6ECF;*/ }
 a:hover { text-decoration:underline; }
@@ -1971,9 +1971,6 @@ a.RRbutton1
 }
 #main-connect
 {
-	background-image: url(img/cover.jpg);
-	background-position: 50%;
-	background-size: cover;
 	color: white;
 	min-height: 100%;
 	padding: 3%;
@@ -2019,4 +2016,8 @@ a.RRbutton1
 	font-size: 17px;
 	margin: 0% 0 2% 2%;
 }
-
+body {
+	background-image: url('img/cover.jpg') !important;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}

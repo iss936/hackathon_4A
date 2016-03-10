@@ -31,7 +31,7 @@
 <body>
 
 <div id="container">
-    <?php if(security::is_connected()): ?>
+    <?php if(!security::is_connected()): ?>
 <div id="header" class="">
 
 	<a href="<?php echo ADRESSE_SITE; ?>index/accueil"><h1 class="ir">Best Western</h1></a>
