@@ -5,7 +5,7 @@
         
     
       <div class="panel-group" id="accordion">
-        <h1>Faq</h1>
+        <h1>FAQ</h1>
         <hr>
           <div class="panel panel-default">
             <div class="panel-heading">

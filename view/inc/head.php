@@ -43,6 +43,7 @@
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/forum" class="expandLinkTopNav">Forum</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>demandes" class="expandLinkTopNav">Demande</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/faq" class="expandLinkTopNav">Faq</a></li>
+		<li><a href="<?php echo ADRESSE_SITE; ?>index/annuaire" class="expandLinkTopNap">Annuaire</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/contactAction" class="expandLinkTopNav">Contact</a></li>
 
         
