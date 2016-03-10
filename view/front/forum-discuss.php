@@ -12,7 +12,7 @@
             //print_r($test);
 
             $idUser = $_SESSION['id'];
-        
+
         ?>
 
         <div class="col-md-8 col-lg-8 blocNews">
@@ -51,7 +51,7 @@
                   <div class="media-body">
                     <!-- Post Info Buttons -->
                     <div class="forum-post-panel btn-group btn-group-xs">
-                      <a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i><?php echo $value['createdAt'] ?></a>
+                      <a href="#" class="btn btn-default"><i class="fa fa-clock-o"></i> Dernière modification le : <?php echo  $value['createdAt'] ?></a>
                     </div>
                     <hr>
                     <!-- Post Info Buttons END -->

@@ -9,9 +9,9 @@ $list = $article->getAll('article');
 $listUser = $user->getAll('user');
 $listDemande = $demande->getAll('demande');
 
-$compte;
-$cptUser;
-$cptDemande;
+$compte=0;
+$cptUser=0;
+$cptDemande=0;
 
 foreach ($list as $cpt) {
     $compte +=1;
