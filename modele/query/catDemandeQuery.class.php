@@ -9,7 +9,7 @@ class catDemandeQuery
 	}
 
 	/**
-	 * [getOthers récupère toutes les catégories de demande]
+	 * [getAll récupère toutes les catégories de demande]
 	 * @param  none
 	 * @return array
 	 */
