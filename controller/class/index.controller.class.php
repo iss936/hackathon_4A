@@ -3,7 +3,8 @@ class index
 {
 
 	public function __construct() {
-
+           
+                
 	}
 
 	public function defaultPage($args) {
@@ -35,33 +36,54 @@ class index
 	}
 
 	public function accueil($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
 		$view = new view("front","accueil");
 	}
 
         public function addArticle($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
 		$view = new view("front","addArticle");
 	}
 
 
         public function addDemande($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
 		$view = new view("front","addDemande");
 	}
 
         public function forum($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
 		$view = new view("front","forum");
 	}
 
 	public function admin($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
 		$view = new view("front","admin");
 	}
     
     public function forumDiscuss($args) {
+         if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
 			$view = new view("front","forum-discuss");
 			$view->assign('idArticle',$args[0]);
 	}
 
 	public function contactAction($args) {
 
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
             $view = new view("front","contact");
 //            $to      = 'adama_sakho@hotmail.com';
 //            $subject = 'the subject';
@@ -76,6 +98,9 @@ class index
         
 
         public function faq($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
             $view = new view("front","faq");
         }
 
