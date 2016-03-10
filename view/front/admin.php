@@ -164,7 +164,7 @@ foreach ($listDemande as $cpt) {
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Mot de passe</label>
-                                        <input type="text" class="form-control" name="password" id="password" placeholder="Password">
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Téléphone</label>
