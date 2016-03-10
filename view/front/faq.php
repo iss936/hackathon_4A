@@ -5,7 +5,7 @@
         
     
       <div class="panel-group" id="accordion">
-        <h1>Faq</h1>
+        <h1>FAQ</h1>
         <hr>
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -29,7 +29,7 @@
           <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
             <div class="panel-body">
               We suggest 13 years and older (18 and under will need a parent present), because some clues may be a little challenging for younger participants.
-            </div>
+            </div>  
           </div>
         </div>
 

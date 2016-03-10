@@ -149,6 +149,14 @@ class index
      	header("Location:/index/forumDiscuss/".$articleId);
 	}
 
+
+	public function annuaire($args) {
+             if(!security::is_connected()){
+                    header("Location: ".ADRESSE_SITE);
+            }
+		$view = new view("front","annuaire");
+	}
+
 	public function disconnect($args){
 		if(security::is_connected())
 			security::disconnect();
