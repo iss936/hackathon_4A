@@ -44,7 +44,7 @@
                 <a href="<?php echo ADRESSE_SITE; ?>index/forum" >
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img  src="<?php echo ADRESSE_SITE; ?>view/css/img/forum_icon.png" style="height:150px; width:150px;" alt="">
+                            <img  src="<?php echo ADRESSE_SITE; ?>view/css/img/forum_icon.png" style="height:110px; width:110px;" alt="">
                             <div class="caption">
                                 <h4><p style="text-align: center;">Forums</p></h4>
                             </div>
@@ -56,7 +56,7 @@
                 <a href="<?php echo ADRESSE_SITE; ?>index/faq">
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/faq-icon.gif" style="height:150px; width:150px;" alt="">
+                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/faq-icon.gif" style="height:110px; width:110px;" alt="">
                             <div class="caption">
                                 <h4><p style="text-align: center;">Foire aux questions</p></h4>
                             </div>
@@ -69,7 +69,7 @@
                 <a href="<?php echo ADRESSE_SITE; ?>demandes">
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/Help-icon.png" style="height:150px; width:150px;" alt="">
+                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/Help-icon.png" style="height:110px; width:110px;" alt="">
                             <div class="caption">
                                 <h4><p style="text-align: center;">Aide</p></h4>
                             </div>
@@ -82,7 +82,7 @@
                 <a href="<?php echo ADRESSE_SITE; ?>index/contactAction">
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/contact-icons.jpg" style="height:150px; width:150px;" alt="">
+                            <img src="<?php echo ADRESSE_SITE; ?>view/css/img/contact-icons.jpg" style="height:110px; width:110px;" alt="">
                             <div class="caption">
                                 <h4><p style="text-align: center;">Contact</p></h4>
                             </div>
@@ -99,8 +99,8 @@
     
         <div class="col-md-3 col-lg-3 blocTop">
         <!-- Half Page Image Background Carousel Header -->
-            <h3 style="margin-bottom: 17%;">Top Hôtels</h3>
-            <hr>
+            <h3 class="tophotel"></h3>
+            
             <table class="table table-striped ">
                 <ul class="list-group">
                     <li class="list-group-item row"><a href="http://www.bestwestern.fr/fr/hotel-paris-1er,BEST-WESTERN-PREMIER-Opera-Faubourg,93808"><img class="col-md-5 col-sm-5" src="<?php echo ADRESSE_SITE; ?>view/css/img/HotelOperaParis.jpg" width=100 height=50><h6 class='col-md-7 col-sm-7'>BEST WESTERN PREMIER Hotel Opera Faubourg, Paris</h6></a></li>
