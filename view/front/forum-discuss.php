@@ -35,7 +35,7 @@
                   <div class="pull-left user-info" href="#">
                     <img class="avatar img-circle img-thumbnail" src="http://snipplicious.com/images/guest.png"
                       width="64" alt="Generic placeholder image">
-                    <strong><a href="user.html"> <?php echo $user->getNom()." ".$user->getPrenom(); ?> </a></strong>
+                    <strong><a href="user.html"> <?php echo $user->getPrenom()." ".$user->getNom(); ?> </a></strong>
                     <br>
                     <small><b>Member</b></small>
                     <br>
@@ -83,16 +83,12 @@
         <!-- Half Page Image Background Carousel Header -->
         <h3>Top Hôtels</h3>
         <hr>
-        <table class="table table-striped">
+        <table class="table table-striped ">
             <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item row"><a href="http://www.bestwestern.fr/fr/hotel-paris-1er,BEST-WESTERN-PREMIER-Opera-Faubourg,93808"><img class="col-md-5 col-sm-5" src="<?php echo ADRESSE_SITE; ?>view/css/img/HotelOperaParis.jpg" width=100 height=50><h6 class='col-md-7 col-sm-7'>BEST WESTERN PREMIER Hotel Opera Faubourg, Paris</h6></a></li>
+                <li class="list-group-item row"><a href="http://www.bestwestern.fr/fr/hotel-Lyon,Best-Western-Hotel-Charlemagne,93451"><img class="col-md-5 col-sm-5" src="<?php echo ADRESSE_SITE; ?>view/css/img/HotelCharlemagneLyon.jpg" width=100 height=50><h6 class='col-md-7 col-sm-7'>BEST WESTERN Hotel Charlemagne, Lyon</h6></a></li>
+                <li class="list-group-item row"><a href="http://www.bestwestern.fr/fr/hotel-Cannes,Best-Western-Hotel-Univers,93694"><img class="col-md-5 col-sm-5" src="<?php echo ADRESSE_SITE; ?>view/css/img/HotelUniversCannes.jpg" width=100 height=50><h6 class='col-md-7 col-sm-7'>BEST WESTERN Hotel Univers, Cannes</h6></a></li>
+
             </ul>
         </table>
     </div>
