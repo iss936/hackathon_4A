@@ -2022,7 +2022,7 @@ a.RRbutton1
 }
 #main
 {
-	min-height: 400px;
+	min-height: 100%;
 	padding: 3%;
 }
 .blocNews
@@ -2034,10 +2034,12 @@ body {
 	background-image: url('img/cover.jpg') !important;
 /*	background-repeat: no-repeat;*/
 	background-size: cover;
+	overflow-x:hidden;
         margin:0;
         padding:0;
 
 }
+
 
 .fa-users {
 	color: #0080FF !important;
