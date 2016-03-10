@@ -148,7 +148,7 @@ foreach ($listDemande as $cpt) {
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-user fa-fw"></i> Ajouter un membre </h3>
                             </div>
-                            <div class="panel-body" style="height:560px; overflow: scroll;">
+                            <div class="panel-body" style="height:610px; overflow: scroll;">
                                 <form method="POST" action="/index/insertMember">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Nom</label>
@@ -173,6 +173,13 @@ foreach ($listDemande as $cpt) {
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Mail</label>
                                         <input type="text" class="form-control" name="mail" id="mail" placeholder="mail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Rôle</label>
+                                        <select class="form-control" name="typeAdmin">
+                                            <option value="ROLE_ADMIN">Admin</option>
+                                            <option value="ROLE_HOTEL">Utilisateur</option>
+                                        </select>
                                     </div>
                                     
                                 <button type="submit" class="btn btn-primary col-md-5 col-lg-5 col-lg-offset-4 col-lg-offset-4">Envoyer</button>

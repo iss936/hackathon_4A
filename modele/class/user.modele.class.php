@@ -19,11 +19,11 @@ class user extends bdd{
 		$this->setPrenom($prenom);
 		$this->setLogin($login);
 		$this->setPassword($password);
-        $this->setIsExpired(0);
+                $this->setIsExpired(0);
 		$this->setTelPro($telPro);
 		$this->setMailPro($mailPro);
 		$this->setRoles($roles);
-        $this->setPhoto("photo.jpg");
+                $this->setPhoto("photo.jpg");
 	}
 
 	public function __construct(){

@@ -22,6 +22,17 @@ class security{
 			return FALSE;
 		}
 	}
+        
+        public static function is_admin(){
+		
+            $user = security::getUser();
+            if($user->getRoles() == 'ROLE_ADMIN'){
+                return true;
+            }else{
+                return false;
+            }
+		
+	}
 	
 	public static function returnId(){
 		if (self::is_connected()){

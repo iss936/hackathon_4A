@@ -44,7 +44,9 @@
 		<li><a href="<?php echo ADRESSE_SITE; ?>demandes" class="expandLinkTopNav">Demande</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/faq" class="expandLinkTopNav">Faq</a></li>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/annuaire" class="expandLinkTopNap">Annuaire</a></li>
+                <?php if(security::is_admin()): ?>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/admin" class="expandLinkTopNav">Admin</a></li>
+                <?php endif; ?>
 		<li><a href="<?php echo ADRESSE_SITE; ?>index/contactAction" class="expandLinkTopNav">Contact</a></li>
 
         

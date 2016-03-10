@@ -123,7 +123,7 @@ class index
 		$nom = $_POST['nom'];
 		$prenom = $_POST['prenom'];
 		$login = $_POST['login'];
-		$password = $_POST['password'];
+		$password = security::makePassword($_POST['password']);
 		$phone = $_POST['phone'];
 		$mail = $_POST['mail'];
 		$typeAdmin = $_POST['typeAdmin'];
