@@ -2021,3 +2021,23 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
+
+.fa-users {
+	color: #0080FF !important;
+}
+
+.fa-file-image-o {
+	color:#FE642E;
+}
+
+.fa-commenting{
+	color: #DF01D7;
+}
+.huge{
+	font-size: 4em;
+	color: green;
+}
+.titleAdmin{
+	color: green;
+	font-size: 1.4em;
+}

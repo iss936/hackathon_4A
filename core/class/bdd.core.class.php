@@ -3,7 +3,7 @@ class bdd {
 	
 	private $bddhost = "localhost";
 	private $bddlogin = "root";
-	private $bddpass = "";
+	private $bddpass = "root";
 	private $bddname = "hackathon";
 	private $classe;
 	public $result = [];
