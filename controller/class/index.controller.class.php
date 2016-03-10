@@ -7,8 +7,10 @@ class index
 	}
 
 	public function defaultPage($args) {
-		if(security::is_connected())
-			header("Location: ".ADRESSE_SITE."index/accueil");
+		if(security::is_connected()){
+                    header("Location: ".ADRESSE_SITE."index/accueil");
+                }
+			
 
 		$view = new view("front","index");
 	}
@@ -61,14 +63,14 @@ class index
 	public function contactAction($args) {
 
             $view = new view("front","contact");
-            $to      = 'adama_sakho@hotmail.com';
-            $subject = 'the subject';
-            $message = 'hello';
-            $headers = 'From: webmaster@example.com' . "\r\n" .
-            'Reply-To: webmaster@example.com' . "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-
-            mail($to, $subject, $message, $headers);
+//            $to      = 'adama_sakho@hotmail.com';
+//            $subject = 'the subject';
+//            $message = 'hello';
+//            $headers = 'From: webmaster@example.com' . "\r\n" .
+//            'Reply-To: webmaster@example.com' . "\r\n" .
+//            'X-Mailer: PHP/' . phpversion();
+//
+//            mail($to, $subject, $message, $headers);
 	}
         
         

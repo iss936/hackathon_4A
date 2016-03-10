@@ -526,6 +526,20 @@ a.frameheadersigninbutton { padding:0.5em 1.5em; color:#FFF; padding:0.5em 1.5em
    WBE END */
 /* ASP EDITS END - DO NOT USE WBE DELIEVERED VERSIONS OF THESE */
 
+#headerConnect {    
+    position: absolute;
+    display: block;
+    left: 26%;
+    bottom: 0;
+    height: 92px;
+    width: 45%;
+    line-height: 35px;
+    background-image: url(img/logo-connect.png);
+    background-size: cover;
+    text-align: right;
+}
+
+
 #headerDivider { position:absolute; display:block; left:0; bottom:0; height:95px; width:100%; line-height:35px; background:#003c7e; background-image:url(img/logo-bw-bar.png); text-align:right; }
 #headerDivider.portals { bottom:none; top:0; height:140px; background-image:url(/img/logo-bw-bar-portals.png); text-align:right; }
 /* START leaving here but commented in case we implement diff logo bars later */
@@ -1977,7 +1991,7 @@ a.RRbutton1
 }
 #header-connect
 {
-	background: #FFF;
+
 	height: 75px;
 	position: relative;
 	z-index: 3;
