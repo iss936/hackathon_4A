@@ -126,7 +126,7 @@ foreach ($listDemande as $cpt) {
                                               <h4><a href="<?php echo ADRESSE_SITE; ?>index/forumDiscuss/<?php echo $value['id']?>"> <?php echo $value['titre'] ?></a></h4>
                                             </td>
                                             <td class="text-center hidden-xs hidden-sm"><a href="#"><?php  echo $listCommentaire;  ?></a></td>
-                                            <td class="hidden-xs hidden-sm"><a href="#" class='btn btn-primary'>Supprimer</a></td>
+                                            <td class="hidden-xs hidden-sm"><a href="/index/removeArticle/<?php echo $value['id'];?>" class='btn btn-primary'>Supprimer</a></td>
                                           </tr>
 
                                           <?php

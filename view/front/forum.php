@@ -32,7 +32,7 @@
                     $user = userQuery::find($id);
                   ?>
                   <tr>
-                    <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                    <td class="text-center"><i class="fa fa-file-o fa-2x text-primary"></i></td>
                     <td>
                       <h4><a href="<?php echo ADRESSE_SITE; ?>index/forumDiscuss/<?php echo $value['id']?>"> <?php echo $value['titre'] ?></a></h4>
                     </td>
