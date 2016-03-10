@@ -51,12 +51,12 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false">What do we get if our team escapes? <i class="pull-right fa fa-caret-down"></i></a>
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false">En cas d'annulation tardive ou de non présentation à l'hôtel, mon séjour sera-t-il facturé ? <i class="pull-right fa fa-caret-down"></i></a>
             </h4>
           </div>
           <div id="collapseFour" class="panel-collapse collapse" aria-expanded="false">
             <div class="panel-body">
-              Pride and bragging rights... <strong>AND</strong> a 50% off coupon for next quarter's game.
+              Pour toute réservation non annulable et non modifiable, l'intégralité des frais est due. Pour toute réservation d'un tarif flexible, le montant de la première nuitée est dû. Nous vous encourageons à prendre contact avec votre banque pour connaître les modalités de l'assurance liées à votre carte bancaire.
             </div>
           </div>
         </div>
@@ -64,12 +64,13 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false">What happens if we don't escape? <i class="pull-right fa fa-caret-down"></i></a>
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false">L'hôtel dispose-t-il d'un parking ?<i class="pull-right fa fa-caret-down"></i></a>
             </h4>
           </div>
           <div id="collapseFive" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
             <div class="panel-body">
-              A debriefing discussing your methods.  Sorry, no participation trophies. :(
+              Certains de nos hôtels disposent d'un parking sur site. N'hésitez pas à contacter l'hôtel dans lequel vous souhaitez séjourner. Vous pouvez également contacter le service clients au 01.49.02.30.00 ou par email serviceclientfrance@bestwestern.fr.
+              <br>Les coordonnées sont disponibles sur la Fiche hôtel ou dans l'email de confirmation.
             </div>
           </div>
         </div>
@@ -77,12 +78,13 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false">Are we allowed to take pictures? <i class="pull-right fa fa-caret-down"></i></a>
+              <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false">A qui adresser mes remarques ? <i class="pull-right fa fa-caret-down"></i></a>
             </h4>
           </div>
           <div id="collapseSix" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
             <div class="panel-body">
-              Only mental ones. Please refrain from using camera/video to spoil the adventure for other people.
+              Vous souhaitez nous faire partager votre expérience dans un de nos établissements ? Une équipe dédiée en France se tient à votre écoute avec plaisir par email serviceclientfrance@bestwestern.fr ou par téléphone au 01.49.02.30.00 - du Lundi au Jeudi, de 9h00 à 18h30 et le Vendredi de 9h00 à 17h30.
+              <br>Notre service client vous recontactera sous 4 jours ouvrés afin de vous apporter une réponse.
             </div>
           </div>
         </div>
