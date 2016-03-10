@@ -24,7 +24,7 @@
                 <!-- Forum Post -->
                 <?php
                     $listCommentaire = commentaireQuery::getAllCommentsByIdArticle($idArticle);
-                    // print_r($listCommentaire);  
+                    // print_r($listCommentaire);   
                     foreach ($listCommentaire as $value) {
 
                     $id = $value['authorId']; 

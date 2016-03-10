@@ -29,7 +29,7 @@
           <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
             <div class="panel-body">
               We suggest 13 years and older (18 and under will need a parent present), because some clues may be a little challenging for younger participants.
-            </div>
+            </div>  
           </div>
         </div>
 
