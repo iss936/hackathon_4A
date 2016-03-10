@@ -99,7 +99,7 @@
     
         <div class="col-md-3 col-lg-3 blocTop">
         <!-- Half Page Image Background Carousel Header -->
-            <h3>Top Hôtels</h3>
+            <h3 style="margin-bottom: 17%;">Top Hôtels</h3>
             <hr>
             <table class="table table-striped ">
                 <ul class="list-group">
