@@ -2032,6 +2032,8 @@ a.RRbutton1
 }
 body {
 	background-image: url('img/cover.jpg') !important;
-	background-repeat: no-repeat;
-	background-size: 100%;
+/*	background-repeat: no-repeat;*/
+	background-size: cover;
+        margin:0;
+        padding:0;
 }
