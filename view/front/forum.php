@@ -5,16 +5,15 @@
             $article = new article();
             //var_dump($catArticle);
             $list = $article->getAll('article');
-            //var_dump($list);
-            //$test = new user();
-            //$test->getOneBy(1,'user');
-            //print_r($test);
         ?>
 
         <div class="col-md-8 col-lg-8 blocNews">
             <!-- Half Page Image Background Carousel Header -->
-            <h1>Derniers articles</h1>
-            <hr>
+            <div class="row">
+                <h2 class="col-lg-7 col-md-7 col-sm-7">Derniers articles</h2> 
+                <a href="/index/addArticle" class="btn btn-primary col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-3 col-sm-3" style='top:18px;'>Ajouter un article</a><br>
+            </div>
+            <hr><br>
             <table class="table forum table-striped">
                 <thead>
                   <tr>
