@@ -12,7 +12,11 @@ class demandes
 	
 	public function defaultPage($args) {
 
+		$demandes = demandeQuery::getListInfo();
+		/*var_dump($demandes);
+		die();*/
 		$view = new view("front/demande","index");
+		$view->assign("demandes",$demandes);
 	}
 
 	public function addDemande() {
