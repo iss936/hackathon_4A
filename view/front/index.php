@@ -1,5 +1,5 @@
 
-	<div id="container">
+	<div>
 
 		<div id="main-connect">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-md-offset-3 col-lg-offset-3 col-sm-offset-3" style="margin-top:6%;">

@@ -1,3 +1,5 @@
+
+<?php if(security::is_connected()): ?>
 <div id="mainBottomBar">
     
     
@@ -9,6 +11,9 @@
    
 
 </div>
+<?php else: ?>
+
+<?php endif; ?>
 
 	
 
