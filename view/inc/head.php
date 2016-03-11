@@ -32,11 +32,15 @@
 
 
 </head>
+    <?php if(security::is_connected()): ?>
 <body>
+        <?php else: ?>
+<body id="bodyConnect">    
+        <?php endif; ?>
 
 <div id="container">
     <?php if(security::is_connected()): ?>
-<div id="header" class="">
+<div id="header">
 
 	<a href="<?php echo ADRESSE_SITE; ?>index/accueil"><h1 class="ir">Best Western</h1></a>
 

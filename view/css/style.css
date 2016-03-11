@@ -153,7 +153,7 @@ input.bwFieldDefaultValue { color:#999; }
 .tierPremier { background-color:#96885C; color:#FFF; }
 .tierPlus { background-color:#999795; color:#FFF; }
 .tierCore { background-color:#1C5394; color:#FFF; }
-.legal { font-size:0.85em; color:#999; font-style:italic; text-align: center; }
+.legal { font-size:0.85em; color:#F9F9F9; font-style:italic; text-align: center; }
 a.closeButton, a.removeButton { display:inline-block; padding-right:15px; text-transform:uppercase; color:#666; font-size:0.9em; background:url(/img/icon-close.gif) no-repeat right center; }
 a.factSheet, a.brochure, a.shareButton, a.bookmarkButton, a.printButton, a.mailButton, a.mapButton { display:inline-block; padding-left:25px; margin-bottom:0.5em; line-height:18px; background-repeat:no-repeat; background-position:0 0; color:#002878; text-transform:uppercase; font-weight:bold; font-size:0.85em; }
 a.closeButton:hover, a.removeButton:hover, a.printButton:hover, a.factSheet:hover, a.brochure:hover, a.shareButton:hover, a.bookmarkButton:hover, a.printButton:hover, a.mailButton:hover, a.mapButton:hover { text-decoration:none; }
@@ -503,7 +503,7 @@ a.frameheadersigninbutton { padding:0.5em 1.5em; color:#FFF; padding:0.5em 1.5em
 .loadingSpinner {display:none;}
 
 /* ASP EDITS START - DO NOT USE WBE DELIEVERED VERSIONS OF THESE */
-#mainNav { position:absolute; right:0; top:-1px; float:left; padding-left:142px; background:#DCE5EF url(img/bg-mainnav-gradient.jpg) repeat-y 0 0; z-index:15; }
+#mainNav { position:initial; right:0; top:-1px; padding-left:142px; background:#DCE5EF url(img/bg-mainnav-gradient.jpg) repeat-y 0 0; z-index:15; }
 #mainNav li { position:relative; float:left; border-left:solid 1px #FFF; }
 #mainNav li:first-child { border-left:none; }
 #mainNav li:first-child  a{ background:none; }
@@ -560,7 +560,7 @@ a.frameheadersigninbutton { padding:0.5em 1.5em; color:#FFF; padding:0.5em 1.5em
 #main { background:#FFF;} /* ASP EDIT - do not include border-top:1px solid #fff; */
 #mainTopBar { padding:0 20px; height:45px; line-height:45px; font-size:0.85em; font-weight:bold; }
 .oneCol #mainTopBar { padding:0; }
-#mainBottomBar { clear:both; height:80px; padding:0 25px; background:#DCE5EF; line-height:40px; font-size:0.85em; }
+#mainBottomBar { clear:both; height:80px; padding:0 25px; background:#95A5B7; line-height:40px; font-size:0.85em; }
 .ie7 #mainBottomBar { line-height:normal; }
 .ie7 #mainBottomBar .button { position:relative; top:5px; }
 #mainBottomBar .pageFB { float:right; margin-top:5px; width:80px; height:21px; }
@@ -2040,6 +2040,14 @@ a.RRbutton1
 	margin: 0% 0 2% 2%;
 }
 body {
+/*	background-repeat: no-repeat;*/
+        margin:0;
+        padding:0;
+        background-color: #CFD8DC !important; 
+
+}
+
+#bodyConnect {
 	background-image: url('img/cover.jpg') !important;
 /*	background-repeat: no-repeat;*/
 	background-size: cover;
