@@ -47,7 +47,7 @@ class demandes
 		$messages = demandeDiscutionQuery::joinMessages($args[0]);
 		$idDemande = $demandeDiscution->getIdDemande();
 		$demande = demandeQuery::find($idDemande);
-
+		
 		$view = new view("front/demande","discussion");
 		$view->assign('demande',$demande);
 		$view->assign('demandeDiscution',$demandeDiscution);

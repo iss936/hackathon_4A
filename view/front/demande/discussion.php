@@ -13,7 +13,9 @@
                 <?php foreach ($messages as $oneMessage): ?>
                     <?php if ($oneMessage['emmeteurId'] == $oneMessage['auteurId']): ?>
                         <li class="self">
-                            <div class="avatar"><img src="" draggable="false"/></div>
+                            <?php $auteur = userQuery::find($oneMessage['emmeteurId']); ?>
+                            
+                            <div class="avatar"><img class="avatar img-circle img-thumbnail" width="64" alt="<?php echo $auteur->getNom(); ?>" title="<?php echo $auteur->getNom(); ?>" src="http://snipplicious.com/images/guest.png"></div>
                             <div class="msg">
                                 <p><?php echo $oneMessage['contenu']; ?></p>
                                 <time><?php echo $oneMessage['dateMessage']; ?></time>
@@ -21,7 +23,9 @@
                         </li>
                     <?php else: ?>
                         <li class="other">
-                            <div class="avatar"><img src="" draggable="false"/></div>
+                            <?php $destinataire = userQuery::find($oneMessage['destinataireId']); ?>
+
+                            <div class="avatar"><img class="avatar img-circle img-thumbnail" width="64" alt="<?php echo $destinataire->getNom(); ?>" title="<?php echo $destinataire->getNom(); ?>"src="http://snipplicious.com/images/guest.png"></div>
                             <div class="msg">
                                 <p><?php echo $oneMessage['contenu']; ?></p>
                                 <time><?php echo $oneMessage['dateMessage']; ?></time>
@@ -238,6 +242,7 @@ a{
     box-shadow: -1px 2px 0px #D4D4D4;
     width: 100%;
     background-color: #3f51b5;
+    margin-left: 20px;
 
 }
 
@@ -269,6 +274,7 @@ a{
     box-shadow: 1px 2px 0px #D4D4D4;
     width: 100%;
     background-color: #90caf9;
+    margin-right: 20px;
 
 }
 
