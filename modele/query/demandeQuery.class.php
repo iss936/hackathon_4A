@@ -28,7 +28,7 @@ class demandeQuery
 	public static function getListInfo()
 	{
 		$demandes = new demande();
-		$demandes = $demandes->requete("SELECT catdemande.nom,demande.*, demandediscution.id as idd, demandediscution.terminer,demandediscution.destinataireId
+		$demandes = $demandes->requete("SELECT catdemande.nom,demande.*, demandediscution.id as idd, demandediscution.terminer,demandediscution.destinataireId, demandediscution.emmeteurId
 		FROM demande,demandediscution,catdemande
 		WHERE demande.catDemandeId = catdemande.id
 		And demande.id = demandediscution.idDemande
