@@ -27,6 +27,25 @@ time, mark, audio, video
 	max-height: 100%;
 }
 
+#spinner
+{
+    display: none;
+    width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background:url(/view/images/ajax-loader-center.gif) no-repeat center;
+    text-align:center;
+    padding:10px;
+    font:normal 16px Tahoma, Geneva, sans-serif;
+    // border:1px solid #666;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index:2;
+    // overflow: auto;
+}
+
 .gecko html, body, div, span, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,

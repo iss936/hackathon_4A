@@ -5,8 +5,20 @@
     <div class="row">
         <div class="col-md-12 col-lg-12 blocNews">
             <h1>Les dernières demandes</h1>
+            <form action="/demandes" method="POST" id="form-filtre">
+                <div class="form-group">
+                  <label> Statut: 
+                      <select id="select-statut" class="form-control" name="statut">
+                         <option value="" selected>Tous</option>
+                         <option value="0">En cours</option>
+                         <option value="1">Terminer</option>
+                      </select>
+                  </label> 
+                </div>
+            </form>
+            
             <hr>
-            <table class="table forum table-striped">
+            <table class="table forum table-striped" id="list-ajax">
                 <thead>
                   <tr>
                     <th>Auteur</th>
@@ -38,7 +50,8 @@
 							 <a href="<?php echo '/demandes/terminer/'.$oneDemande['idd']; ?>" class="btn btn-warning" data-original-title="Terminer la discussion" data-confirm="Etes-vous sur de vouloir terminer la discussion ? Il ne vous sera plus possible de communiquer avec votre destinataire">Terminer</a>
 							<!-- <a href="#" class="btn btn-danger">Supprimer</a> -->
             			<?php endif; ?>
-						<a href=""></a></td>
+						<a href=""></a>
+                        </td>
 
                 		
 	                  </tr>
@@ -68,6 +81,9 @@
   </div>
 </div>
 
+<div id="spinner">
+</div>
+
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -79,6 +95,35 @@
             $('#dataConfirmOK').attr('href', href);
             $('#dataConfirmModal').modal({show:true});
             return false;
+        });
+
+        $("#select-statut").change(function(event) {
+            var sUrl = "/demandes/listAjax";
+            $.ajax({
+                type: "POST",
+                url: sUrl,
+                dataType: "html",
+                data: $("#form-filtre").serialize(),
+                beforeSend: function(xhr) {
+                    $("#spinner").show();
+                },
+                success: function(data) {
+                    $("#list-ajax").html(data);
+                },  
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert("error");
+                }
+            })
+            .done(function(data,textStatus) {
+                if(textStatus == "success")
+                {
+                    $("#spinner").hide();
+                }
+            })
+            .fail(function() {
+                $("#spinner").hide();
+                alert("Problème rencontré lors du filtre");
+            });
         });
    
     });

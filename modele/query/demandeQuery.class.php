@@ -38,6 +38,33 @@ class demandeQuery
 	}
 
 	/**
+	 * [récupère les infos importantes pour la liste des demandes jointure de 3 tables (demande,catdemande,demandediscution)]
+	 * @param  array tabFiltre
+	 * @return array
+	 */
+	public static function getListInfoFiltre($tabFiltre)
+	{
+		$demandes = new demande();
+		$query = "SELECT catdemande.nom,demande.*, demandediscution.id as idd, demandediscution.terminer,demandediscution.destinataireId, demandediscution.emmeteurId
+		FROM demande,demandediscution,catdemande
+		WHERE demande.catDemandeId = catdemande.id
+		And demande.id = demandediscution.idDemande";
+
+		if(isset($tabFiltre['statut']))
+		{
+			if ($tabFiltre['statut'] != "") {
+				$query = $query." AND demandediscution.terminer = ".$tabFiltre['statut'];
+			}
+		}
+
+		$query = $query. " Order by demande.createdBy DESC;";
+
+		$demandes = $demandes->requete($query);
+
+		return $demandes;
+	}
+
+	/**
 	 * [find récupère une demande dont l'id est passé en param]
 	 * @param  integer $id = id de la demande
 	 * @return object $demande

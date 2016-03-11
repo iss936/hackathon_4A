@@ -26,6 +26,34 @@ class demandes
 
 	}
 
+	public function listAjax($args) {
+		
+		// req ajax
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']))
+		{
+			$demandes = demandeQuery::getListInfoFiltre($_POST);
+
+			$user = security::getUser();
+			// demandes dont je suis l'auteur
+			$mesDemandesDiscutions = userQuery::getDemandeDiscutions($user->getId());
+
+             include '/view/front/demande/listAjax.php';
+		}
+
+/*		$demandes = demandeQuery::getListInfo();
+
+		$user = security::getUser();
+		// demandes dont je suis l'auteur
+		$mesDemandesDiscutions = userQuery::getDemandeDiscutions($user->getId());
+
+		$view = new view("front/demande","index");
+		$view->assign("demandes",$demandes);
+		$view->assign("user",$user);
+		$view->assign("mesDemandesDiscutions",$mesDemandesDiscutions);*/
+
+
+	}
+
 	public function voirDemande($args) 
 	{
 		if(!isset($args[0]))
@@ -134,7 +162,7 @@ class demandes
 		{
 			$_SESSION['flash_messageValidate'] = "Vous n'avez pas le droit de terminer la discution";
 			header("Location: ".ADRESSE_SITE."demandes");
-			
+
 		}
 		
 
