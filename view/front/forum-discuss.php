@@ -73,7 +73,7 @@
                         <h5><b>Commenter</b></h5>
                         <hr>
                         <div class="form-group">
-                          <textarea name="contenu" id="comment" class="form-control" rows="5" placeholder="Ne postez pas d'insultes, évitez les majuscules, faites une recherche avant de poster pour voir si la question n'a pas déjà été posée... Tout message d'incitation au piratage est strictement interdit et sera puni d'un bannissement."></textarea>
+                          <textarea class="js-editor" name="contenu" id="comment" class="form-control" rows="5" placeholder="Ne postez pas d'insultes, évitez les majuscules, faites une recherche avant de poster pour voir si la question n'a pas déjà été posée... Tout message d'incitation au piratage est strictement interdit et sera puni d'un bannissement."></textarea>
                         </div>
                         <button type="submit" class="btn btn-default alert-info">Envoyer</button>
                   </form>

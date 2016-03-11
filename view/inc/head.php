@@ -19,11 +19,15 @@
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/bootstrap.css" type="text/css">
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/half-slider.css" type="text/css">
 <link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/font-awesome.css" type="text/css">
+<link rel="stylesheet" href="<?php echo ADRESSE_SITE; ?>view/css/bootstrap3-wysihtml5.min.css" type="text/css">
+
+
 
 
 <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
 <script type="text/javascript" src="<?php echo ADRESSE_SITE; ?>view/js/jquery-1.11.3.min.js"></script>
-
+<script type="text/javascript" src="<?php echo ADRESSE_SITE; ?>view/js/bootstrap3-wysihtml5.min.js"></script>
+<script type="text/javascript" src="<?php echo ADRESSE_SITE; ?>view/js/bootstrap3-wysihtml5.all.min.js"></script>
 
 
 

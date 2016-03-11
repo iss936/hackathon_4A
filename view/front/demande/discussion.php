@@ -38,7 +38,7 @@
 
     <br><br>
     <form id="form-messagerie" action="<?php echo '/demandes/addMessageAjax/'.$demandeDiscution->getId(); ?>" method="POST">
-        <textarea id="mail" class="form-control" name="message" rows="10" cols="5" placeholder="Saisir un message ..." required="Veuillez saisir un message"></textarea>
+        <textarea id="mail" class="form-control js-editor" name="message" rows="10" cols="5" placeholder="Saisir un message ..." required="Veuillez saisir un message"></textarea>
 
         <div align="center">
             <input type="submit" class="btn btn-success" value="Envoyer">  
