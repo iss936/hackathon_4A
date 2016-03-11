@@ -39,11 +39,9 @@ time, mark, audio, video
     text-align:center;
     padding:10px;
     font:normal 16px Tahoma, Geneva, sans-serif;
-    // border:1px solid #666;
     margin-left: -50px;
     margin-top: -50px;
     z-index:2;
-    // overflow: auto;
 }
 
 .gecko html, body, div, span, object, iframe, 

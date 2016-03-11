@@ -59,7 +59,7 @@
 
         
             <li>
-            <a href="<?php echo ADRESSE_SITE; ?>index/disconnect" class="expandLinkTopNav" style="color:red">Déconnexion</a>
+            <a href="<?php echo ADRESSE_SITE; ?>index/disconnect" class="expandLinkTopNav" style="color:red">Log out</a>
             </li>
         
 	</ul>
