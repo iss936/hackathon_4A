@@ -3,25 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/hackathon_4A/view/inc/foot.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/view/front/admin.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/view/front/demande/addDemande.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/view/front/index.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/modele/class/article.modele.class.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/view/front/accueil.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/core/class/bdd.core.class.dist.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/view/front/forum.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/view/front/flashMessage.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/view/front/faq.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/view/index/index.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/modele/class/catArticle.modele.class.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/view/front/demande/index.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/view/inc/head.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/core/class/constantes.core.dist.class.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/core/class/security.core.class.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/controller/class/index.controller.class.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/view/layout/index.layout.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/view/css/style.css</file>
-            <file>file:/C:/wamp/www/hackathon_4A/controller/class/demandes.controller.class.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/view/front/contact.php</file>
-            <file>file:/C:/wamp/www/hackathon_4A/core/class/bdd.core.class.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/modele/class/catDemande.modele.class.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/core/class/bdd.core.class.php</file>
             <file>file:/C:/wamp/www/hackathon_4A/modele/class/commentaire.modele.class.php</file>
+            <file>file:/C:/wamp/www/hackathon_4A/view/404/404.php</file>
         </group>
     </open-files>
 </project-private>
