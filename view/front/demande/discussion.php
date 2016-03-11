@@ -15,7 +15,7 @@
                         <li class="self">
                             <?php $auteur = userQuery::find($oneMessage['emmeteurId']); ?>
                             
-                            <div class="avatar"><img class="avatar img-circle img-thumbnail" width="64" alt="<?php echo $auteur->getNom(); ?>" title="<?php echo $auteur->getNom(); ?>" src="http://snipplicious.com/images/guest.png"></div>
+                            <div class="avatar"><img class="avatar img-circle img-thumbnail" width="64" alt="<?php echo $auteur->getNom(); ?>" title="<?php echo $auteur->getNom(); ?>" src="/view/images/guest.png"></div>
                             <div class="msg">
                                 <p><?php echo $oneMessage['contenu']; ?></p>
                                 <time><?php echo $oneMessage['dateMessage']; ?></time>
@@ -25,7 +25,7 @@
                         <li class="other">
                             <?php $destinataire = userQuery::find($oneMessage['destinataireId']); ?>
 
-                            <div class="avatar"><img class="avatar img-circle img-thumbnail" width="64" alt="<?php echo $destinataire->getNom(); ?>" title="<?php echo $destinataire->getNom(); ?>"src="http://snipplicious.com/images/guest.png"></div>
+                            <div class="avatar"><img class="avatar img-circle img-thumbnail" width="64" alt="<?php echo $destinataire->getNom(); ?>" title="<?php echo $destinataire->getNom(); ?>"src="/view/images/guest.png"></div>
                             <div class="msg">
                                 <p><?php echo $oneMessage['contenu']; ?></p>
                                 <time><?php echo $oneMessage['dateMessage']; ?></time>
@@ -39,23 +39,55 @@
             </div>
         </div>
     </div>
-
+    <?php if($demandeDiscution->getTerminer() == 0): ?>
     <br><br>
     <form id="form-messagerie" action="<?php echo '/demandes/addMessageAjax/'.$demandeDiscution->getId(); ?>" method="POST">
         <textarea id="mail" class="form-control js-editor" name="message" rows="10" cols="5" placeholder="Saisir un message ..." required="Veuillez saisir un message"></textarea>
 
         <div align="center">
             <input type="submit" class="btn btn-success" value="Envoyer">  
-            <a href="#" class="btn btn-warning">Terminer</a>
+            <a href="<?php echo '/demandes/terminer/'.$demandeDiscution->getId(); ?>" class="btn btn-warning" data-original-title="Terminer la discussion" data-confirm="Etes-vous sur de vouloir terminer la discussion ? Il ne vous sera plus possible de communiquer avec votre destinataire">Terminer</a>
         </div>
     </form>
+    <?php else: ?>
+        <div class="text-center">
+            <h2>Cette discution est désormais terminée</h2>
+            <br><br>
+            <a href="/demandes" class="btn btn-default"> Retourner à la liste des demandes</a>
+        </div>
+    <?php endif; ?>
+</div>
 
+<div class="modal fade" id="dataConfirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+      </div>
+      <div class="modal-body" id="myModalContent" style='color: #000'>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        <a class="btn btn-primary" id="dataConfirmOK">Valider</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
 
     $(document).ready(function(){
         // setInterval ( "get()", 5000 );
+        $('a[data-confirm]').click(function(ev) {
+            var href = $(this).attr('href');
+
+            $('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
+            $('#dataConfirmOK').attr('href', href);
+            $('#dataConfirmModal').modal({show:true});
+            return false;
+        });
+   
     });
 
     function get()
@@ -88,6 +120,7 @@
                     alert("error");
                 }
             });
+
             return false;
         });
 </script>

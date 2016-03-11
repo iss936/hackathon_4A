@@ -15,6 +15,7 @@ class demandes
 		$demandes = demandeQuery::getListInfo();
 
 		$user = security::getUser();
+		// demandes dont je suis l'auteur
 		$mesDemandesDiscutions = userQuery::getDemandeDiscutions($user->getId());
 
 		$view = new view("front/demande","index");
@@ -47,7 +48,7 @@ class demandes
 		$messages = demandeDiscutionQuery::joinMessages($args[0]);
 		$idDemande = $demandeDiscution->getIdDemande();
 		$demande = demandeQuery::find($idDemande);
-		
+
 		$view = new view("front/demande","discussion");
 		$view->assign('demande',$demande);
 		$view->assign('demandeDiscution',$demandeDiscution);
@@ -94,6 +95,51 @@ class demandes
 		}
 	}
 
+	/**
+	 * [terminer une demande]
+	 * @param  [array] $args [params integer idDemandeDiscution]
+	 * @return [type]       [description]
+	 */
+	public function terminer($args) {
+		
+		if(!isset($args[0]))
+		{
+			header("Location: ".ADRESSE_SITE."demandes");
+			exit();
+		}
+		else // on a un argument
+		{
+			$demandeDiscution = demandeDiscutionQuery::find($args[0]);
+			if($demandeDiscution->getId() == null)
+			{
+				header("Location: ".ADRESSE_SITE."demandes");
+				exit();
+			}
+		}
+
+		$user = security::getUser();
+
+		// L'argument est valide
+		if($user->getRoles() == "ROLE_ADMIN" || $demandeDiscution->getEmmeteurId() == $user->getId())
+		{
+			$demandeDiscution->setTerminer(1);
+			$demandeDiscution->save("demandeDiscution");
+			
+			$_SESSION['flash_messageValidate'] = "La demande est désormais terminée";
+			// header("Location: ".ADRESSE_SITE."demandes/voirDemande/".$args[0]);
+			header("Location: ".ADRESSE_SITE."demandes");
+			
+		}
+		else
+		{
+			$_SESSION['flash_messageValidate'] = "Vous n'avez pas le droit de terminer la discution";
+			header("Location: ".ADRESSE_SITE."demandes");
+			
+		}
+		
+
+
+	}
 	public function getMessagesAjax($args) {
 		// requête ajax
 		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && isset($args[0]))
