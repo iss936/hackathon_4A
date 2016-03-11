@@ -128,8 +128,8 @@
 
 <style type="text/css">
     
-    @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@/*import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);*/
 
 html, body {
     background: #e5e5e5;
@@ -476,7 +476,7 @@ input.textarea {
     left: 7px;
     width: 34px;
     height: 34px;
-    background-image: url(http://i.imgur.com/5WUpcPZ.png);
+    /*background-image: url(http://i.imgur.com/5WUpcPZ.png);*/
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 100;
