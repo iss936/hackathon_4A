@@ -16,7 +16,16 @@ time, mark, audio, video
 	vertical-align: baseline;
 }
 
+.chat-container{
+	border: 1px solid #ddd;
+    height: 500px;
+    width: 100%;
+}
 
+.chat-scroll{
+	overflow: auto;
+	max-height: 100%;
+}
 
 .gecko html, body, div, span, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

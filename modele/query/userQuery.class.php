@@ -28,11 +28,24 @@ class userQuery
 	 */
 	public static function find($id)
 	{
-		$user = new user;
+		$user = new user();
 		$user->getOneBy($id, "id", "user");
 		$user->setFromBdd($user->result);
 
 		return $user;
+	}
+
+	/**
+	 * [récupère les demandes du user passé en param]
+	 * @param  integer $id = id du User
+	 * @return array of demandes
+	 */
+	public static function getDemandeDiscutions($id)
+	{
+		$demandes = new demande();
+		$demandes = $demandes->requete("SELECT * FROM demandediscution Where emmeteurId = ".$id." ORDER BY updatedAt DESC");
+
+		return $demandes;
 	}
 	
 }

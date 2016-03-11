@@ -13,11 +13,110 @@ class demandes
 	public function defaultPage($args) {
 
 		$demandes = demandeQuery::getListInfo();
-		/*var_dump($demandes);
-		die();*/
+
+		$user = security::getUser();
+		$mesDemandesDiscutions = userQuery::getDemandeDiscutions($user->getId());
+
 		$view = new view("front/demande","index");
 		$view->assign("demandes",$demandes);
+		$view->assign("user",$user);
+		$view->assign("mesDemandesDiscutions",$mesDemandesDiscutions);
+
+
 	}
+
+	public function voirDemande($args) 
+	{
+		if(!isset($args[0]))
+		{
+			header("Location: ".ADRESSE_SITE."demandes");
+			exit();
+		}
+		else // on a un argument
+		{
+			$demandeDiscution = demandeDiscutionQuery::find($args[0]);
+			if($demandeDiscution->getId() == null)
+			{
+				header("Location: ".ADRESSE_SITE."demandes");
+				exit();
+			}
+		}
+
+
+		// l'argument est valide
+		$messages = demandeDiscutionQuery::joinMessages($args[0]);
+		$idDemande = $demandeDiscution->getIdDemande();
+		$demande = demandeQuery::find($idDemande);
+
+		$view = new view("front/demande","discussion");
+		$view->assign('demande',$demande);
+		$view->assign('demandeDiscution',$demandeDiscution);
+		$view->assign('messages',$messages);
+
+		// $view->assign('users',$users);
+	}
+
+	public function addMessageAjax($args) {
+		
+		
+		// requête ajax
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && isset($args[0]))
+		{	
+
+			$idDemandeDiscution = $args[0];
+			$demandeDiscution = demandeDiscutionQuery::find($args[0]);
+
+			if($demandeDiscution)
+			{
+				$message = $_POST['message'];
+				
+				$messageDemande = new messageDemande();
+				$messageDemande->setIdDemandeDiscution($idDemandeDiscution);
+	        	$messageDemande->setCreatedAt(date('Y-m-d H:i:s'));
+				$messageDemande->setContenu($message);
+				$messageDemande->setAuteurId($this->idUser);
+				$messageDemande->save("messageDemande");
+
+				// envoi mail
+				// 
+				
+				$idDemande = $demandeDiscution->getIdDemande();
+				$demande = demandeQuery::find($idDemande);
+
+				$messages = demandeDiscutionQuery::joinMessages($args[0]);
+				
+				$_SESSION['flash_messageValidate'] = "Un nouveau message a été envoyé";
+
+             	include '/view/front/demande/messagesAjax.php';
+
+
+			}
+		}
+	}
+
+	public function getMessagesAjax($args) {
+		// requête ajax
+		if(isset($_SERVER['HTTP_X_REQUESTED_WITH']) && isset($args[0]))
+		{	
+			$idDemandeDiscution = $args[0];
+			$demandeDiscution = demandeDiscutionQuery::find($args[0]);
+
+			if($demandeDiscution)
+			{
+				$messages = demandeDiscutionQuery::joinMessages($args[0]);
+				$view = new view("front/demande","messagesAjax");
+				$view->assign('messages',$messages);
+			}
+		}
+	}
+
+
+/*	public function getMessages($args) {
+		
+		$messages = demandeDiscutionQuery::joinMessages($args[0]);
+		$view = new view("front/demande","messagesAjax");
+		$view->assign('messages',$messages);
+	}*/
 
 	public function addDemande() {
 		
@@ -37,7 +136,6 @@ class demandes
 			$tabDemande = $_POST;
 			// var_dump($tabDemande);
 			$user = security::getUser();
-			$bdd = new bdd();
 			$demande = new demande();
 			$demande->setSujet($tabDemande['sujet']);
 			$demande->setCreatedBy($user->getNom());
@@ -57,6 +155,7 @@ class demandes
 			$messageDemande->setIdDemandeDiscution($_SESSION['lastInsertId']);
         	$messageDemande->setCreatedAt(date('Y-m-d H:i:s'));
 			$messageDemande->setContenu($tabDemande['message']);
+			$messageDemande->setAuteurId($this->idUser);
 			$messageDemande->save("messageDemande");
 
 			// envoie mail

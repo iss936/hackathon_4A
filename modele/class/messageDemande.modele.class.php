@@ -5,6 +5,7 @@ class messageDemande extends bdd{
     protected $idDemandeDiscution;
     protected $createdAt;
     protected $contenu;
+    protected $auteurId;
 
 	public function __construct(){
         parent::__construct();
@@ -112,6 +113,30 @@ class messageDemande extends bdd{
     public function setContenu($contenu)
     {
         $this->contenu = $contenu;
+
+        return $this;
+    }
+
+     /**
+     * Gets the value of auteurId.
+     *
+     * @return mixed
+     */
+    public function getAuteurId()
+    {
+        return $this->auteurId;
+    }
+
+    /**
+     * Sets the value of auteurId.
+     *
+     * @param mixed $auteurId the auteurId
+     *
+     * @return self
+     */
+    public function setAuteurId($auteurId)
+    {
+        $this->auteurId = $auteurId;
 
         return $this;
     }
